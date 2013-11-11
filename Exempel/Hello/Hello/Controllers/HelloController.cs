@@ -35,10 +35,5 @@ namespace Hello.Controllers
             var model = new Salutation();
             return View(model);
         }
-        public ActionResult GreetWithModel2()
-        {
-            var model = new Salutation();
-            return View(model);
-        }
     }
 }
