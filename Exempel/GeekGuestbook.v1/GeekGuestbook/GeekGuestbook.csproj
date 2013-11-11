@@ -256,7 +256,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Guestbook\Index.cshtml" />
     <Content Include="Views\Guestbook\Create.cshtml" />
-    <Content Include="Views\Guestbook\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
