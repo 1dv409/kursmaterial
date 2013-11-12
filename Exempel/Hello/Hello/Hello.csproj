@@ -221,7 +221,6 @@
     <Content Include="Views\Hello\GreetWithViewBag.cshtml" />
     <Content Include="Views\Hello\GreetWithViewBagAndModel.cshtml" />
     <Content Include="Views\Hello\GreetWithModel.cshtml" />
-    <Content Include="Views\Hello\GreetWithModel2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
