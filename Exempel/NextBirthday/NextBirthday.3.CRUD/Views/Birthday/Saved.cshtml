@@ -1,0 +1,15 @@
+﻿@model NextBirthday.Models.Birthday
+
+@{
+    ViewBag.Title = "Födelsedagen sparad";
+}
+
+<h1>Födelsedagen sparad</h1>
+
+<p>
+    Födelsedagen för <strong>@Model.Name</strong>, 
+    <strong>@Model.Birthdate.ToShortDateString()</strong>, har sparats.
+</p>
+<p>
+    @Html.ActionLink("Tillbaka till lista med födelsedagar", "Index")
+</p>

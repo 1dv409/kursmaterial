@@ -1,0 +1,35 @@
+﻿@model NextBirthday.Models.Birthday
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nästa födelsedag</title>
+</head>
+<body>
+    <h1>
+        Nästa födelsedag
+    </h1>
+    @using (Html.BeginForm())
+    {
+        <div>
+            @Html.LabelFor(model => model.Name):
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Name)
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Birthdate):
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Birthdate)
+        </div>
+    
+        <p>
+            <input type="submit" value="Skicka" />
+        </p>
+    }
+</body>
+</html>

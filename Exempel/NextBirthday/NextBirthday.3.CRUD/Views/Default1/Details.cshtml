@@ -1,0 +1,29 @@
+﻿@model NextBirthday.Models.Birthday
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Birthday</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Birthdate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Birthdate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.BirthdayId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

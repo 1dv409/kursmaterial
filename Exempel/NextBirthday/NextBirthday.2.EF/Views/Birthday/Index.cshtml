@@ -1,0 +1,24 @@
+﻿@model IEnumerable<NextBirthday.Models.Birthday>
+
+@{
+    ViewBag.Title = "Nästa födelsedag";
+}
+
+<h1>
+    Nästa födelsedag!
+</h1>
+@if (Model != null)
+{
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li><strong>@Html.DisplayFor(modelItem => item.Name)</strong> kommer att fylla @Html.DisplayFor(modelItem => item.Age)
+                år på en @item.NextBirthdayDate.ToString("dddd")
+                <strong>om @Html.DisplayFor(modelItem => item.DaysUntilNextBirthday) dagar</strong>.
+            </li>
+        }
+    </ul>
+}
+<p>
+    @Html.ActionLink("Lägg till födelsedag", "Create")
+</p>

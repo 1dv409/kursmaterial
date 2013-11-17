@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NextBirthday.Models.DataModels.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="NextBirthdayModelsDataModelsStoreContainer">
+          <EntitySet Name="Birthday" EntityType="NextBirthday.Models.DataModels.Store.Birthday" store:Type="Tables" Schema="app" />
+        </EntityContainer>
+        <EntityType Name="Birthday">
+          <Key>
+            <PropertyRef Name="BirthdayId" />
+          </Key>
+          <Property Name="BirthdayId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Birthdate" Type="datetime2" Nullable="false" Precision="0" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Function Name="DeleteBirthday" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="BirthdayId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="InsertBirthday" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+          <Parameter Name="Birthdate" Type="datetime2" Mode="In" />
+        </Function>
+        <Function Name="UpdateBirthday" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="BirthdayId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+          <Parameter Name="Birthdate" Type="datetime2" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NextBirthday.Models.DataModels" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GeekBirthdayEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Birthdays" EntityType="NextBirthday.Models.DataModels.Birthday" />
+        </EntityContainer>
+        <EntityType Name="Birthday">
+          <Key>
+            <PropertyRef Name="BirthdayId" />
+          </Key>
+          <Property Name="BirthdayId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Birthdate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NextBirthdayModelsDataModelsStoreContainer" CdmEntityContainer="GeekBirthdayEntities">
+          <EntitySetMapping Name="Birthdays">
+            <EntityTypeMapping TypeName="NextBirthday.Models.DataModels.Birthday">
+              <MappingFragment StoreEntitySet="Birthday">
+                <ScalarProperty Name="BirthdayId" ColumnName="BirthdayId" />
+                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="NextBirthday.Models.DataModels.Birthday">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="NextBirthday.Models.DataModels.Store.InsertBirthday">
+                  <ScalarProperty Name="Birthdate" ParameterName="Birthdate" />
+                  <ScalarProperty Name="Name" ParameterName="Name" />
+                  <ResultBinding Name="BirthdayId" ColumnName="NewBirthdayId" />
+                </InsertFunction>
+                <UpdateFunction FunctionName="NextBirthday.Models.DataModels.Store.UpdateBirthday">
+                  <ScalarProperty Name="Birthdate" ParameterName="Birthdate" Version="Current" />
+                  <ScalarProperty Name="Name" ParameterName="Name" Version="Current" />
+                  <ScalarProperty Name="BirthdayId" ParameterName="BirthdayId" Version="Current" />
+                </UpdateFunction>
+                <DeleteFunction FunctionName="NextBirthday.Models.DataModels.Store.DeleteBirthday">
+                  <ScalarProperty Name="BirthdayId" ParameterName="BirthdayId" />
+                </DeleteFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,67 @@
+﻿@import url("reset.css");
+@import url("typographic-base.css");
+
+body
+{
+    margin:10px;
+}
+
+input
+{
+    margin: 0 0 .5em 0;
+}
+
+ul
+{
+    list-style: disc inside;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+.editor-label 
+{
+    margin: 0 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0 0 1em 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
