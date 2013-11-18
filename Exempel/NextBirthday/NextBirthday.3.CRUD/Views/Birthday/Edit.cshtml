@@ -6,32 +6,8 @@
 
 <h1>Redigera födelsedag</h1>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true, "Fel inträffade. Korrigera det som är fel och försök igen.")
-    @Html.HiddenFor(model => model.BirthdayId)
+@Html.Partial("_BirthdayForm")
 
-    <div class="editor-label">
-        @Html.LabelFor(model => model.Name):
-    </div>
-    <div class="editor-field">
-        @Html.EditorFor(model => model.Name)
-        @Html.ValidationMessageFor(model => model.Name)
-    </div>
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.Birthdate):
-    </div>
-    <div class="editor-field">
-        @Html.EditorFor(model => model.Birthdate)
-        @Html.ValidationMessageFor(model => model.Birthdate)
-    </div>
-
-    <p>
-        <input type="submit" value="Spara" />
-    </p>
-}
 <p>
     @Html.ActionLink("Tillbaka till lista med födelsedagar", "Index")
 </p>

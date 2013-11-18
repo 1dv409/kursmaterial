@@ -47,7 +47,7 @@ namespace NextBirthday.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Birthday birthday)
+        public ActionResult Create([Bind(Include="Name, Birthdate")]Birthday birthday)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace NextBirthday.Controllers
                     _repository.UpdateBirthday(birthday);
                     _repository.Save();
 
-                    return RedirectToAction("Saved");
+                    return View("Saved", birthday);
                 }
                 catch (Exception)
                 {
@@ -131,7 +131,7 @@ namespace NextBirthday.Controllers
                 _repository.DeleteBirthday(id);
                 _repository.Save();
 
-                return RedirectToAction("Deleted");
+                return View("Deleted");
             }
             catch (Exception)
             {

@@ -32,7 +32,7 @@ namespace NextBirthday.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repository.Add(birthday);
+                _repository.InsertBirthday(birthday);
                 _repository.Save();
 
                 return RedirectToAction("Index");

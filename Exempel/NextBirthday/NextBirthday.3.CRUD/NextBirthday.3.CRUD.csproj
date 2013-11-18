@@ -129,7 +129,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BirthdayController.cs" />
-    <Compile Include="Controllers\Default1Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -263,16 +262,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Birthday\Create.cshtml" />
     <Content Include="Views\Birthday\Index.cshtml" />
-    <Content Include="Views\Default1\Index.cshtml" />
-    <Content Include="Views\Default1\Details.cshtml" />
-    <Content Include="Views\Default1\Create.cshtml" />
-    <Content Include="Views\Default1\Edit.cshtml" />
-    <Content Include="Views\Default1\Delete.cshtml" />
     <Content Include="Views\Birthday\NotFound.cshtml" />
     <Content Include="Views\Birthday\Edit.cshtml" />
     <Content Include="Views\Birthday\Saved.cshtml" />
     <Content Include="Views\Birthday\Deleted.cshtml" />
     <Content Include="Views\Birthday\Delete.cshtml" />
+    <Content Include="Views\Birthday\_BirthdayForm.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -25,14 +25,6 @@ namespace NextBirthday.Models.Repository
             PhysicalPath = HttpContext.Current.Server.MapPath("~/App_Data/Birthdates.xml");
         }
 
-        public void InsertBirthday(Birthday birthday)
-        {
-            Document.Root.Add(
-                new XElement("birthdate",
-                    new XElement("name", birthday.Name),
-                    new XElement("date", birthday.Birthdate)));
-        }
-
         public IEnumerable<Birthday> GetBirthdays()
         {
             return (from birthdate in Document.Descendants("birthdate")
@@ -41,6 +33,14 @@ namespace NextBirthday.Models.Repository
                         Name = birthdate.Element("name").Value,
                         Birthdate = DateTime.Parse(birthdate.Element("date").Value)
                     }).OrderBy(b => b.DaysUntilNextBirthday).ToList();
+        }
+
+        public void InsertBirthday(Birthday birthday)
+        {
+            Document.Root.Add(
+                new XElement("birthdate",
+                    new XElement("name", birthday.Name),
+                    new XElement("date", birthday.Birthdate)));
         }
 
         public void Save()
