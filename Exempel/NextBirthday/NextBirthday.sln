@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextBirthday.2.EF", "NextBi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextBirthday.3.CRUD", "NextBirthday.3.CRUD\NextBirthday.3.CRUD.csproj", "{07D4ED42-AE66-4D82-8154-45E4DF7F466E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextBirthday.1.XML.START", "NextBirthday.1.XML.START\NextBirthday.1.XML.START.csproj", "{675FFF2E-B9ED-46B4-8539-B81948D9D413}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{07D4ED42-AE66-4D82-8154-45E4DF7F466E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07D4ED42-AE66-4D82-8154-45E4DF7F466E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07D4ED42-AE66-4D82-8154-45E4DF7F466E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675FFF2E-B9ED-46B4-8539-B81948D9D413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675FFF2E-B9ED-46B4-8539-B81948D9D413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675FFF2E-B9ED-46B4-8539-B81948D9D413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675FFF2E-B9ED-46B4-8539-B81948D9D413}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
