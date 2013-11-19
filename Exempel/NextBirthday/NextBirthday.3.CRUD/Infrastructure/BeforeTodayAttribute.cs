@@ -13,7 +13,12 @@ namespace NextBirthday.Infrastructure
 
         public override bool IsValid(object value)
         {
-            return base.IsValid(value) && ((DateTime)value) < DateTime.Today;
+            if (value == null)
+            {
+                return true;
+            }
+
+            return value is DateTime && ((DateTime)value) < DateTime.Today;
         }
     }
 }
