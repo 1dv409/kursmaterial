@@ -1,0 +1,8 @@
+﻿@model NextBirthday.Models.Birthday
+@if (Model != null && ViewData.ModelState.IsValid)
+{
+    <p>
+        @Model.Name kommer att fylla @Model.Age år på en @Model.NextBirthdayDate.ToString("dddd")
+        om @Model.DaysUntilNextBirthday dagar.
+    </p>
+}

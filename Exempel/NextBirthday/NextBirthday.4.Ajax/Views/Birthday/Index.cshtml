@@ -1,0 +1,75 @@
+﻿@model NextBirthday.Models.Birthday
+
+@{
+    ViewBag.Title = "Nästa  födelsedag";
+
+    var ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "upcoming-birthday",
+        Url = Url.Action("Index"),
+        OnSuccess = "handleAjaxSuccess",
+        OnFailure = "handleAjaxFailure"
+    };
+}
+
+@using (Ajax.BeginForm(ajaxOptions))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Name):
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Birthdate):
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Birthdate)
+        @Html.ValidationMessageFor(model => model.Birthdate)
+    </div>
+    <p>
+        <input type="submit" value="Skicka" />
+    </p>
+}
+
+<div id="upcoming-birthday">
+    @Html.Partial("_UpcomingBirthday")
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        function handleAjaxSuccess(ajaxContext) {
+            // Remove all error messages in the validation summary.
+            $('div[data-valmsg-summary="true"] ul').empty();
+        }
+
+        function handleAjaxFailure(ajaxContext) {
+            // Empty the target element.
+            $('#upcoming-birthday').empty();
+            //$("#upcoming-birthday").html("<span  class='field-validation-error'>" + ajaxContext.responseText + "</span>");
+
+            // Convert the response text, a JSON string, into a dictionary.
+            var errors = JSON.parse(ajaxContext.responseText)["Errors"];
+
+            // Insert validation summary elements, if we need to, and appends form errors to the validation summary.
+            if (errors[""].length) {
+                if (!$('div[data-valmsg-summary="true"]').length) {
+                    $('form').prepend('<div class="validation-summary-errors" data-valmsg-summary="true"><ul></ul></div>');
+                }
+                $(".validation-summary-errors ul").empty();
+                for (var i in errors[""]) {
+                    $(".validation-summary-errors ul").append("<li>" + errors[""][i] + "</li>");
+                }
+            }
+
+            // Show property errors.
+            $('form').validate().showErrors(errors);
+        }
+    </script>
+
+}
