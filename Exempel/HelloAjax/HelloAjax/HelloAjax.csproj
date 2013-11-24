@@ -126,6 +126,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HelloController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,6 +187,12 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\simple-lnu\images\arrow-down.png" />
+    <Content Include="Content\themes\simple-lnu\images\arrow-right.png" />
+    <Content Include="Content\themes\simple-lnu\images\arrow-up.png" />
+    <Content Include="Content\themes\simple-lnu\images\cc-by-nc-sa.png" />
+    <Content Include="Content\themes\simple-lnu\reset.css" />
+    <Content Include="Content\themes\simple-lnu\site.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
@@ -215,10 +222,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Layout.SimpleLnu.cshtml" />
+    <Content Include="Views\Hello\Index.cshtml" />
+    <Content Include="Views\Hello\_Greeting.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

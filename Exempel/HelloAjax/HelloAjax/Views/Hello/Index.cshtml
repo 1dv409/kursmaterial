@@ -1,0 +1,24 @@
+﻿@model System.String
+
+@{
+    ViewBag.Title = "Hej!";
+    var ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "result",
+        Url = Url.Action("HelloAjax")
+    };
+}
+
+@using (Ajax.BeginForm(ajaxOptions))
+{
+    @Html.AntiForgeryToken()
+    @Html.TextBox("greeting")
+    <input type="submit" value="Posta hälsning (med Ajax-förfrågan)" />
+}
+<div id="result">
+    @Model
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
