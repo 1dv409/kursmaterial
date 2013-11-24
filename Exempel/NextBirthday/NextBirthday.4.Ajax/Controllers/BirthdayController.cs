@@ -27,7 +27,10 @@ namespace NextBirthday.Controllers
             //ModelState.AddModelError("Birthdate", "Birthdate Error #1");
             //ModelState.AddModelError("Birthdate", "Birthdate Error #2");
             //ModelState.AddModelError("Name", "Name Error #1");
-            //ModelState.AddModelError(String.Empty, "Form Error #1");
+            if (new Random().Next(10) < 5)
+            {
+                ModelState.AddModelError(String.Empty, "Form Error #1");
+            }
 
             if (Request.IsAjaxRequest())
             {

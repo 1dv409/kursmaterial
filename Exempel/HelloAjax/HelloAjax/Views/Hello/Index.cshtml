@@ -1,24 +1,84 @@
-﻿@model System.String
+﻿@model HelloAjax.Models.GreetData
 
 @{
     ViewBag.Title = "Hej!";
     var ajaxOptions = new AjaxOptions
     {
         UpdateTargetId = "result",
-        Url = Url.Action("HelloAjax")
+        Url = Url.Action("Index"),
+        OnFailure = "handleAjaxFailure"
     };
 }
 
 @using (Ajax.BeginForm(ajaxOptions))
 {
+    @Html.ValidationSummary(true);
     @Html.AntiForgeryToken()
-    @Html.TextBox("greeting")
-    <input type="submit" value="Posta hälsning (med Ajax-förfrågan)" />
+    @Html.TextBoxFor(m => m.Greeting) 
+    @Html.ValidationMessageFor(m => m.Greeting)
+    <input type="submit" value="Posta hälsning" />
 }
 <div id="result">
-    @Model
+    @if (Model != null)
+    {
+        @Html.Partial("_Greeting", Model.Greeting)
+    }
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        function handleAjaxFailure(ajaxContext) {
+            // Empty the ajax target element.
+            $('#result').empty();
+
+            // Convert the response text, a JSON string, into a dictionary.
+            var errors = JSON.parse(ajaxContext.responseText)["Errors"];
+
+            // Show property errors.
+            $('form').validate().showErrors(errors);
+        }
+    </script>
 }
+
+
+@*    <script>
+        function handleAjaxSuccess(ajaxContext) {
+            // Remove all none property errors.
+            if ($('div[data-valmsg-summary="true"]').length !== 0) {
+                if ($('div[data-valmsg-summary="true"]').hasClass("validation-summary-errors")) {
+                    $('div[data-valmsg-summary="true"]').removeClass("validation-summary-errors");
+                    $('div[data-valmsg-summary="true"]').addClass("validation-summary-valid");
+                }
+                $('div[data-valmsg-summary="true"] ul').empty();
+            }
+        }
+
+        function handleAjaxFailure(ajaxContext) {
+            // Empty the ajax target element.
+            $('#result').empty();
+
+            // Convert the response text, a JSON string, into a dictionary.
+            var errors = JSON.parse(ajaxContext.responseText)["Errors"];
+
+            // Show property errors.
+            $('form').validate().showErrors(errors);
+
+            // Show none property errors. Insert validation summary elements, if we need to, and append 
+            // form errors to the validation summary.
+            if (errors[""] !== undefined) {
+                if ($('div[data-valmsg-summary="true"]').length === 0) {
+                    $('form').prepend('<div class="validation-summary-errors" data-valmsg-summary="true"><ul></ul></div>');
+                }
+                else if ($('div[data-valmsg-summary="true"]').hasClass("validation-summary-valid")) {
+                    $('div[data-valmsg-summary="true"]').removeClass("validation-summary-valid");
+                    $('div[data-valmsg-summary="true"]').addClass("validation-summary-errors");
+                }
+                $('div[data-valmsg-summary="true"] ul').empty();
+                for (var i in errors[""]) {
+                    $('div[data-valmsg-summary="true"] ul').append("<li>" + errors[""][i] + "</li>");
+                }
+            }
+        }
+    </script>*@

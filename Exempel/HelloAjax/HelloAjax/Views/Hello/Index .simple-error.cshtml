@@ -1,0 +1,36 @@
+﻿@model HelloAjax.Models.GreetData
+
+@{
+    ViewBag.Title = "Hej!";
+    var ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "result",
+        Url = Url.Action("Index"),
+        OnFailure = "handleAjaxFailure"
+    };
+}
+
+@using (Ajax.BeginForm(ajaxOptions))
+{
+    @Html.ValidationSummary(true);
+    @Html.AntiForgeryToken()
+    @Html.TextBoxFor(m => m.Greeting) 
+    @Html.ValidationMessageFor(m => m.Greeting)
+    <input type="submit" value="Posta hälsning" />
+}
+<div id="result">
+    @if (Model != null)
+    {
+        @Html.Partial("_Greeting", Model.Greeting)
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        function handleAjaxFailure(ajaxContext) {
+            $("#result").html("<span  class='field-validation-error'>" + ajaxContext.responseText + "</span>");
+        }
+    </script>
+}

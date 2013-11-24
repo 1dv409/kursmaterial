@@ -130,6 +130,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\GreetData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -225,11 +226,10 @@
     <Content Include="Views\Shared\_Layout.SimpleLnu.cshtml" />
     <Content Include="Views\Hello\Index.cshtml" />
     <Content Include="Views\Hello\_Greeting.cshtml" />
+    <Content Include="Views\Hello\Index.no-validation.cshtml" />
+    <Content Include="Views\Hello\Index .simple-error.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
