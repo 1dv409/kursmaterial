@@ -6,6 +6,7 @@
     {
         UpdateTargetId = "result",
         Url = Url.Action("Index"),
+        OnSuccess = "handleAjaxSuccess",
         OnFailure = "handleAjaxFailure"
     };
 }
@@ -29,21 +30,6 @@
     @Scripts.Render("~/bundles/jqueryval")
 
     <script>
-        function handleAjaxFailure(ajaxContext) {
-            // Empty the ajax target element.
-            $('#result').empty();
-
-            // Convert the response text, a JSON string, into a dictionary.
-            var errors = JSON.parse(ajaxContext.responseText)["Errors"];
-
-            // Show property errors.
-            $('form').validate().showErrors(errors);
-        }
-    </script>
-}
-
-
-@*    <script>
         function handleAjaxSuccess(ajaxContext) {
             // Remove all none property errors.
             if ($('div[data-valmsg-summary="true"]').length !== 0) {
@@ -81,4 +67,5 @@
                 }
             }
         }
-    </script>*@
+    </script>
+}
