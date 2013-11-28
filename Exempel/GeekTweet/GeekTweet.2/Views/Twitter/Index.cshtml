@@ -18,18 +18,12 @@
         <input type="submit" value="Get Tweets" />
     </div>
 }
-@if (Model != null && Model.Tweets != null && Model.Tweets.Any())
+@if (Model != null && Model.HasTweets)
 {
     <div id="tweets">
-@*        <h2>
-            The Latest Tweets by @Model.Tweets[0].Name</h2>*@
-        @foreach (var tweet in Model.Tweets)
-        {
-            <h3>
-                @tweet.CreatedAt.ToString(System.Globalization.CultureInfo.InvariantCulture)</h3>
-            <p>
-                @tweet.Text</p>
-        }
+        <h2>
+            The Latest Tweets by @Model.Name</h2>
+        @Html.DisplayFor(m => m.Tweets)
     </div>
 }
 

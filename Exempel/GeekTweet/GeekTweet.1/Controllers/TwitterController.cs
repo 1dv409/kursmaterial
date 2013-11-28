@@ -27,7 +27,7 @@ namespace GeekTweet.Controllers
                 if (ModelState.IsValid)
                 {
                     var webservice = new TwitterWebservice();
-                    model.Tweets = webservice.GetUserTimeLine(model.ScreenName).AsReadOnly();
+                    model.Tweets = webservice.GetUserTimeLine(model.ScreenName);
                 }
             }
             catch (Exception ex)

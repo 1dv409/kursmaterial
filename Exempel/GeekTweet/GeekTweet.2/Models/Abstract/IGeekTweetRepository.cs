@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace GeekTweet.Models.Abstract
 {
-    interface IGeekTweetRepository : IDisposable
+    public interface IGeekTweetRepository : IDisposable
     {
-        IQueryable<Tweet> QueryTweets();
         IEnumerable<Tweet> GetTweets();
         Tweet GetTweetById(int tweetId);
         void InsertTweet(Tweet tweet);
         void UpdateTweet(Tweet tweet);
         void DeleteTweet(int tweetId);
 
-        IQueryable<User> QueryUsers();
         IEnumerable<User> GetUsers();
         User GetUserById(int userId);
+        User GetUserByScreenName(string screenname);
         void InsertUser(User user);
         void UpdateUser(User user);
         void DeleteUser(int userId);

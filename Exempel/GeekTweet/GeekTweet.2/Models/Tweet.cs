@@ -10,12 +10,18 @@ namespace GeekTweet.Models
 {
     public partial class Tweet
     {
-        public Tweet(JToken tweetToken)
+        public Tweet()
         {
-           // Name = (tweetToken["user"]["name"]).ToString();
-            Text = (tweetToken["text"]).ToString();
-            CreatedAt = DateTime.ParseExact((tweetToken["created_at"]).ToString(),
+            // Empty!
+        }
+
+        public Tweet(JToken tweetToken, User user)
+        {
+            Text = (string)tweetToken["text"];
+            CreatedAt = DateTime.ParseExact((string)tweetToken["created_at"],
                 "ddd MMM dd HH:mm:ss zz00 yyyy", CultureInfo.InvariantCulture);
+            UserId = user.UserId;
+            //User = user;
         }
     }
 }

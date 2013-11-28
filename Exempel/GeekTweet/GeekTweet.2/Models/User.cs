@@ -12,6 +12,9 @@ namespace GeekTweet.Models
     {
         public User(JToken userToken)
         {
+            Id = (string)userToken["id_str"];
+            Name = (string)userToken["name"];
+            ScreenName = (string)userToken["screen_name"];
         }
     }
 }

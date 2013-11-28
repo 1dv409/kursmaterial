@@ -5,9 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0109923e489e4cbf9f01615cab32086f" Name="Diagram1">
-        <EntityTypeShape EntityType="GeekTweet.Models.DataModels.Tweet" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="GeekTweet.Models.DataModels.User" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="GeekTweet.Models.DataModels.FK_Tweet_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GeekTweet.Models.DataModels.Tweet" Width="1.5" PointX="3.5" PointY="1" />
+        <AssociationConnector Association="GeekTweet.Models.DataModels.FK_Tweet_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

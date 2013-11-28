@@ -10,64 +10,77 @@ namespace GeekTweet.Models.Repositories
 {
     public class GeekTweetRepository : GeekTweetRepositoryBase
     {
-        private GeekTweetEntities _entities = new GeekTweetEntities();
+        private GeekTweetEntities _context = new GeekTweetEntities();
 
         // Tweet
-        public override IQueryable<Tweet> QueryTweets()
+        protected override IQueryable<Tweet> QueryTweets()
         {
-            return _entities.Tweets.AsQueryable();
+            return _context.Tweets.AsQueryable();
         }
 
         public override void InsertTweet(Tweet tweet)
         {
-            _entities.Tweets.Add(tweet);
+            _context.Tweets.Add(tweet);
         }
 
         public override void UpdateTweet(Tweet tweet)
         {
-            _entities.Entry(tweet).State = EntityState.Modified;
+            _context.Entry(tweet).State = EntityState.Modified;
         }
 
         public override void DeleteTweet(int tweetId)
         {
-            throw new NotImplementedException();
+            Tweet tweet = _context.Tweets.Find(tweetId);
+            _context.Tweets.Remove(tweet);
         }
 
         // Query
-        public override IQueryable<User> QueryUsers()
+        protected override IQueryable<User> QueryUsers()
         {
-            return _entities.Users.AsQueryable();
+            return _context.Users.AsQueryable();
         }
 
         public override void InsertUser(User user)
         {
-            _entities.Users.Add(user);
+            _context.Users.Add(user);
         }
 
         public override void UpdateUser(User user)
         {
-            _entities.Entry(user).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
         }
 
         public override void DeleteUser(int userId)
         {
-            throw new NotImplementedException();
+            User user = _context.Users.Find(userId);
+            _context.Users.Remove(user);
         }
 
         public override IEnumerable<string> FindDistinctScreenNames(string term)
         {
-            return _entities.FindDistinctScreenNames(term).ToArray();
+            return _context.FindDistinctScreenNames(term).ToArray();
         }
 
         public override void Save()
         {
-            _entities.SaveChanges();
+            _context.SaveChanges();
         }
 
         // Dispose
+
+        private bool _disposed = false;
+
         protected override void Dispose(bool disposing)
         {
-            _entities.Dispose();
+            if (!_disposed)
+            {
+                if (disposing)
+                {
+                    _context.Dispose();
+                }
+            }
+            _disposed = true; 
+            
             base.Dispose(disposing);
         }
     }

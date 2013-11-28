@@ -10,7 +10,7 @@ namespace GeekTweet.Models.Abstract
         #region IGeekTweetRepository Members
 
         // Tweet
-        public abstract IQueryable<Tweet> QueryTweets();
+        protected abstract IQueryable<Tweet> QueryTweets();
 
         public IEnumerable<Tweet> GetTweets()
         {
@@ -27,7 +27,7 @@ namespace GeekTweet.Models.Abstract
         public abstract void DeleteTweet(int tweetId);
 
         // User
-        public abstract IQueryable<User> QueryUsers();
+        protected abstract IQueryable<User> QueryUsers();
 
         public IEnumerable<User> GetUsers()
         {
@@ -37,6 +37,11 @@ namespace GeekTweet.Models.Abstract
         public User GetUserById(int userId)
         {
             return QueryUsers().SingleOrDefault(u => u.UserId == userId);
+        }
+
+        public User GetUserByScreenName(string screenName)
+        {
+            return QueryUsers().SingleOrDefault(u => u.ScreenName == screenName);
         }
 
         public abstract void InsertUser(User user);

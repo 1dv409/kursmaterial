@@ -132,6 +132,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Abstract\GeekTweetServiceBase.cs" />
+    <Compile Include="Models\Abstract\IGeekTweetService.cs" />
     <Compile Include="Models\Abstract\GeekTweetRepositoryBase.cs" />
     <Compile Include="Models\Abstract\IGeekTweetRepository.cs" />
     <Compile Include="Models\DataModels\GeekTweetModel.Context.cs">
@@ -155,6 +157,7 @@
     <Compile Include="Models\DataModels\User.cs">
       <DependentUpon>GeekTweetModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GeekTweetService.cs" />
     <Compile Include="Models\Repositories\GeekTweetRepository.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Webservices\OAuthTwitterWrapper.cs" />
@@ -226,7 +229,7 @@
     <Content Include="Content\themes\simple-lnu\site.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="App_Data\scottgu.json" />
+    <Content Include="App_Data\scottgu_timeline.json" />
     <EntityDeploy Include="Models\DataModels\GeekTweetModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>GeekTweetModel.Designer.cs</LastGenOutput>
@@ -245,6 +248,7 @@
       <LastGenOutput>GeekTweetModel.cs</LastGenOutput>
       <CustomToolNamespace>GeekTweet.Models</CustomToolNamespace>
     </Content>
+    <Content Include="App_Data\scottgu_user.json" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -274,6 +278,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Twitter\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.SimpleLnu.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Tweet.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

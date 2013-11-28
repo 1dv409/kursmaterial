@@ -16,6 +16,20 @@ namespace GeekTweet.ViewModels
         [StringLength(50)]
         public string ScreenName { get; set; }
 
-        public ReadOnlyCollection<Tweet> Tweets { get; set; }
+        public bool HasTweets
+        {
+            get { return Tweets != null && Tweets.Any(); }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return User != null ? User.Name : "[Unknown]";
+            }
+        }
+
+        public IEnumerable<Tweet> Tweets { get; set; }
+        public User User { get; set; }
     }
 }

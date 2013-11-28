@@ -28,8 +28,8 @@ namespace GeekTweet.Models.DataModels
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Tweet> Tweets { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Tweet> Tweets { get; set; }
     
         public virtual ObjectResult<string> FindDistinctScreenNames(string pattern)
         {

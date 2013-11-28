@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
+using GeekTweet.Models;
 using GeekTweet.Models.Webservices;
 using GeekTweet.ViewModels;
 
@@ -26,9 +30,9 @@ namespace GeekTweet.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var webservice = new TwitterWebservice();
-                    webservice.LookupUser(model.ScreenName);
-                    model.Tweets = webservice.GetUserTimeLine(model.ScreenName).AsReadOnly();
+                    var service = new GeekTweetService();
+                    model.Tweets = service.GetTweets(model.ScreenName);
+                    model.User = model.Tweets.First().User;
                 }
             }
             catch (Exception ex)
