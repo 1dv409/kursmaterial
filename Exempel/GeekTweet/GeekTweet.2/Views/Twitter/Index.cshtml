@@ -21,8 +21,8 @@
 @if (Model != null && Model.Tweets != null && Model.Tweets.Any())
 {
     <div id="tweets">
-        <h2>
-            The Latest Tweets by @Model.Tweets[0].Name</h2>
+@*        <h2>
+            The Latest Tweets by @Model.Tweets[0].Name</h2>*@
         @foreach (var tweet in Model.Tweets)
         {
             <h3>

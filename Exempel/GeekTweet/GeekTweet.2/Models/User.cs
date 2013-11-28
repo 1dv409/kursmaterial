@@ -10,6 +10,8 @@ namespace GeekTweet.Models
 {
     public partial class User
     {
-        public int UserId { get; set; }
+        public User(JToken userToken)
+        {
+        }
     }
 }

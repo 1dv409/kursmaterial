@@ -44,6 +44,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -132,6 +134,27 @@
     </Compile>
     <Compile Include="Models\Abstract\GeekTweetRepositoryBase.cs" />
     <Compile Include="Models\Abstract\IGeekTweetRepository.cs" />
+    <Compile Include="Models\DataModels\GeekTweetModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeekTweetModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModels\GeekTweetModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeekTweetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModels\GeekTweetModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeekTweetModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModels\Tweet.cs">
+      <DependentUpon>GeekTweetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModels\User.cs">
+      <DependentUpon>GeekTweetModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Repositories\GeekTweetRepository.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Webservices\OAuthTwitterWrapper.cs" />
@@ -204,6 +227,24 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="App_Data\scottgu.json" />
+    <EntityDeploy Include="Models\DataModels\GeekTweetModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GeekTweetModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DataModels\GeekTweetModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GeekTweetModel.edmx</DependentUpon>
+      <LastGenOutput>GeekTweetModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DataModels\GeekTweetModel.edmx.diagram">
+      <DependentUpon>GeekTweetModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\DataModels\GeekTweetModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GeekTweetModel.edmx</DependentUpon>
+      <LastGenOutput>GeekTweetModel.cs</LastGenOutput>
+      <CustomToolNamespace>GeekTweet.Models</CustomToolNamespace>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -234,11 +275,12 @@
     <Content Include="Views\Twitter\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.SimpleLnu.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\DataModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

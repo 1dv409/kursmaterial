@@ -43,7 +43,7 @@ namespace GeekTweet.Models.Abstract
         public abstract void UpdateUser(User user);
         public abstract void DeleteUser(int userId);
 
-        public abstract string[] FindDistinctScreenNames(string term);
+        public abstract IEnumerable<string> FindDistinctScreenNames(string term);
 
         public abstract void Save();
 

@@ -10,41 +10,54 @@ using Newtonsoft.Json;
 
 namespace GeekTweet.Models.Webservices
 {
+    public class OAuthTwitterAccessToken
+    {
+        [JsonProperty("access_token")]
+        public string Token { get; set; }
+
+        [JsonProperty("token_type")]
+        public string Type { get; set; }
+    }
+
     public class OAuthTwitterWrapper
     {
-        public dynamic GetAccessToken()
+        /// <summary>
+        /// Gets an access token from the service provider.
+        /// </summary>
+        /// <returns>Returns an OAuthTwitterAccessToken object containing the parsed OAuth response.</returns>
+        public OAuthTwitterAccessToken GetAccessToken()
         {
-            // Obtain access token to Twitter's API.
-
+            // Get settings from Web.config.
             var oAuthConsumerKey = ConfigurationManager.AppSettings["OAuthConsumerKey"];
             var oAuthConsumerSecret = ConfigurationManager.AppSettings["OAuthConsumerSecret"];
             var oAuthUrl = ConfigurationManager.AppSettings["OAuthUrl"];
 
+            // Create OAuth request.
             var authorizationHeader = string.Format("Basic {0}",
                 Convert.ToBase64String(Encoding.UTF8.GetBytes(
                     Uri.EscapeDataString(oAuthConsumerKey) + ":" + Uri.EscapeDataString((oAuthConsumerSecret)))
             ));
 
-            var oAuthRequest = (HttpWebRequest)WebRequest.Create(oAuthUrl);
-            oAuthRequest.Headers.Add("Authorization", authorizationHeader);
-            oAuthRequest.Method = "POST";
-            oAuthRequest.ContentType = "application/x-www-form-urlencoded;charset=UTF-8";
-            oAuthRequest.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+            var request = (HttpWebRequest)WebRequest.Create(oAuthUrl);
+            request.Headers.Add("Authorization", authorizationHeader);
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded;charset=UTF-8";
+            request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
-            using (Stream stream = oAuthRequest.GetRequestStream())
+            using (Stream stream = request.GetRequestStream())
             {
                 byte[] content = ASCIIEncoding.ASCII.GetBytes("grant_type=client_credentials");
                 stream.Write(content, 0, content.Length);
             }
 
-            oAuthRequest.Headers.Add("Accept-Encoding", "gzip");
+            request.Headers.Add("Accept-Encoding", "gzip");
 
-            dynamic accessToken;
-            using (var authResponse = oAuthRequest.GetResponse())
+            // Request for an access token.
+            OAuthTwitterAccessToken accessToken;
+            using (var authResponse = request.GetResponse())
             using (var reader = new StreamReader(authResponse.GetResponseStream()))
             {
-                var objectText = reader.ReadToEnd();
-                accessToken = JsonConvert.DeserializeObject<dynamic>(objectText);
+                accessToken = JsonConvert.DeserializeObject<OAuthTwitterAccessToken>(reader.ReadToEnd());
             }
 
             return accessToken;
