@@ -25,7 +25,7 @@ namespace GeekTweet.ViewModels
         {
             get
             {
-                return Tweets != null && Tweets.Any() ? Tweets.First().Name : "[Unknown]";
+                return HasTweets ? Tweets.First().Name : "[Unknown]";
             }
         }
         public IEnumerable<Tweet> Tweets { get; set; }

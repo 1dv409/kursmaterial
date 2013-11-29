@@ -27,7 +27,7 @@ namespace GeekTweet.Models.Webservices
             //var requestUriString = String.Format("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name={0}&count=5", screenName);
             //var request = (HttpWebRequest)WebRequest.Create(requestUriString);
             //request.Headers.Add("Authorization", String.Format("{0} {1}", accessToken.Type, accessToken.Token));
-            //request.Method = "GET";
+            
             //using (var response = request.GetResponse())
             //using (var reader = new StreamReader(response.GetResponseStream()))
             //{
