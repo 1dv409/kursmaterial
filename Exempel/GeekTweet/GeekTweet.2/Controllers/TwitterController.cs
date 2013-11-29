@@ -24,7 +24,7 @@ namespace GeekTweet.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(TwitterViewModel model)
+        public ActionResult Index([Bind(Include = "ScreenName")] TwitterIndexViewModel model)
         {
             try
             {

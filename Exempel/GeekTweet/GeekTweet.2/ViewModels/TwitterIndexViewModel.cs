@@ -9,7 +9,7 @@ using GeekTweet.Models;
 
 namespace GeekTweet.ViewModels
 {
-    public class TwitterViewModel
+    public class TwitterIndexViewModel
     {
         [DisplayName("Name")]
         [Required]
@@ -20,14 +20,16 @@ namespace GeekTweet.ViewModels
         {
             get { return Tweets != null && Tweets.Any(); }
         }
-        
+
         public string Name
         {
             get
             {
-                return HasTweets ? Tweets.First().Name : "[Unknown]";
+                return User != null ? User.Name : "[Unknown]";
             }
         }
+
         public IEnumerable<Tweet> Tweets { get; set; }
+        public User User { get; set; }
     }
 }

@@ -164,7 +164,7 @@
     <Compile Include="Models\Tweet.cs" />
     <Compile Include="Models\Webservices\TwitterWebservice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\TwitterViewModel.cs" />
+    <Compile Include="ViewModels\TwitterIndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
