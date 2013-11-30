@@ -56,11 +56,6 @@ namespace GeekTweet.Models.Repositories
             _context.Users.Remove(user);
         }
 
-        public override IEnumerable<string> FindDistinctScreenNames(string term)
-        {
-            return _context.FindDistinctScreenNames(term).ToArray();
-        }
-
         public override void Save()
         {
             _context.SaveChanges();

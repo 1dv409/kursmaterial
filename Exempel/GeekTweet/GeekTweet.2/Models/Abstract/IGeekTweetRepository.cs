@@ -21,8 +21,6 @@ namespace GeekTweet.Models.Abstract
         void UpdateUser(User user);
         void DeleteUser(int userId);
 
-        IEnumerable<string> FindDistinctScreenNames(string term);
-
         void Save();
     }
 }

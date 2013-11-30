@@ -8,7 +8,6 @@ namespace GeekTweet.Models.Abstract
 {
     public interface IGeekTweetService : IDisposable
     {
-        IEnumerable<string> GetScreenNames(string term);
         IEnumerable<Tweet> GetTweets(string screenName);
     }
 }

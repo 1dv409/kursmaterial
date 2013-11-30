@@ -21,7 +21,7 @@ namespace GeekTweet.Models
             CreatedAt = DateTime.ParseExact((string)tweetToken["created_at"],
                 "ddd MMM dd HH:mm:ss zz00 yyyy", CultureInfo.InvariantCulture);
             UserId = user.UserId;
-            //User = user;
+            User = user;
         }
     }
 }

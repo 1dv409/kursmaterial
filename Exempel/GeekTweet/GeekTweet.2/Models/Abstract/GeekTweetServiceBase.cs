@@ -9,7 +9,6 @@ namespace GeekTweet.Models.Abstract
     {
         #region IGeekTweetService Members
 
-        public abstract IEnumerable<string> GetScreenNames(string term);
         public abstract IEnumerable<Tweet> GetTweets(string screenName);
 
         #endregion

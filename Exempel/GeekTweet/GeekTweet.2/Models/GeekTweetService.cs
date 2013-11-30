@@ -23,15 +23,11 @@ namespace GeekTweet.Models
             _repository = repository;
         }
 
-        public override IEnumerable<string> GetScreenNames(string term)
-        {
-            return _repository.FindDistinctScreenNames(term);
-        }
-
         public override IEnumerable<Tweet> GetTweets(string screenName)
         {
             // Try to get the user from the database.
             var user = _repository.GetUserByScreenName(screenName);
+
 
             // If there is no user...
             if (user == null)
@@ -54,13 +50,6 @@ namespace GeekTweet.Models
                 // ...get the tweets from the web service, and add them to the user,...
                 var webservice = new TwitterWebservice();
                 webservice.GetUserTimeLine(user).ForEach(t => _repository.InsertTweet(t));
-                //tweets.ForEach(t => t.UserId = user.UserId);
-                //tweets.ForEach(t => user.Tweets.Add(t));
-
-                //foreach (var item in tweets)
-                //{
-                //    user.Tweets.Add(item);
-                //}
 
                 // ...set the time of the next update and ...
                 user.NextUpdate = DateTime.Now.AddMinutes(1);

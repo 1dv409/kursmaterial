@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GeekTweet")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("GeekTweet.2")]
+[assembly: AssemblyDescription("ASp.NET MVC (1DV409)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("LNU")]
-[assembly: AssemblyProduct("GeekTweet")]
-[assembly: AssemblyCopyright("Copyright © LNU 2013")]
+[assembly: AssemblyCompany("Linnéuniversitetet")]
+[assembly: AssemblyProduct("GeekTweet.2")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("499b3bbb-c451-499b-bd3a-55b6a760a06c")]
+[assembly: Guid("d9ef4d26-5c15-4f19-8453-f9598782b500")]
 
 // Version information for an assembly consists of the following four values:
 //

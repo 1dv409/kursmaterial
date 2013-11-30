@@ -12,9 +12,6 @@ namespace GeekTweet.Models.DataModels
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Objects;
-    using System.Data.Objects.DataClasses;
-    using System.Linq;
     
     public partial class GeekTweetEntities : DbContext
     {
@@ -28,16 +25,7 @@ namespace GeekTweet.Models.DataModels
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<User> Users { get; set; }
         public DbSet<Tweet> Tweets { get; set; }
-    
-        public virtual ObjectResult<string> FindDistinctScreenNames(string pattern)
-        {
-            var patternParameter = pattern != null ?
-                new ObjectParameter("Pattern", pattern) :
-                new ObjectParameter("Pattern", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("FindDistinctScreenNames", patternParameter);
-        }
+        public DbSet<User> Users { get; set; }
     }
 }
