@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using GeekTweet.Models;
+using GeekTweet.Models.Abstract;
 using GeekTweet.Models.Webservices;
 using GeekTweet.ViewModels;
 
@@ -11,6 +12,19 @@ namespace GeekTweet.Controllers
 {
     public class TwitterController : Controller
     {
+        private IGeekTweetService _service;
+
+        public TwitterController()
+            : this(new GeekTweetService())
+        {
+            // Empty!
+        }
+
+        public TwitterController(IGeekTweetService service)
+        {
+            _service = service;
+        }
+
         //
         // GET: /Twitter/
 
@@ -30,8 +44,7 @@ namespace GeekTweet.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var service = new GeekTweetService();
-                    model.Tweets = service.GetTweets(model.ScreenName);
+                    model.Tweets = _service.GetTweets(model.ScreenName);
                     model.User = model.Tweets.First().User;
                 }
             }
@@ -45,6 +58,7 @@ namespace GeekTweet.Controllers
 
         protected override void Dispose(bool disposing)
         {
+            _service.Dispose();
             base.Dispose(disposing);
         }
 

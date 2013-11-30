@@ -28,7 +28,6 @@ namespace GeekTweet.Models
             // Try to get the user from the database.
             var user = _repository.GetUserByScreenName(screenName);
 
-
             // If there is no user...
             if (user == null)
             {
