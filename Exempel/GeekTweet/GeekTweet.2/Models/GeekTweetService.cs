@@ -35,7 +35,7 @@ namespace GeekTweet.Models
                 var webservice = new TwitterWebservice();
                 user = webservice.LookupUser(screenName);
 
-                // ...save the user in the database.
+                // ...save the changes in the repository to the database.
                 this._repository.InsertUser(user);
                 this._repository.Save();
             }
@@ -46,14 +46,14 @@ namespace GeekTweet.Models
                 // ...delete the old(?) tweets (if there are any),...
                 user.Tweets.ToList().ForEach(t => _repository.DeleteTweet(t.TweetId));
 
-                // ...get the tweets from the web service, and add them to the user,...
+                // ...get the tweets from the web service, and insert them,...
                 var webservice = new TwitterWebservice();
                 webservice.GetUserTimeLine(user).ForEach(t => _repository.InsertTweet(t));
 
                 // ...set the time of the next update and ...
                 user.NextUpdate = DateTime.Now.AddMinutes(1);
 
-                // ...save the changes in the database.
+                // ...save the changes in the repository to the database.
                 _repository.Save();
             }
 
