@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekTweet.1", "GeekTweet.1\GeekTweet.1.csproj", "{8569FDEB-5277-4CCD-8F11-B9905D280AFD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekTweet.2", "GeekTweet.2\GeekTweet.2.csproj", "{95DF40E5-A957-475F-8B24-EC7774E781A8}"
 EndProject
 Global
@@ -11,10 +9,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8569FDEB-5277-4CCD-8F11-B9905D280AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8569FDEB-5277-4CCD-8F11-B9905D280AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8569FDEB-5277-4CCD-8F11-B9905D280AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8569FDEB-5277-4CCD-8F11-B9905D280AFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95DF40E5-A957-475F-8B24-EC7774E781A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95DF40E5-A957-475F-8B24-EC7774E781A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95DF40E5-A957-475F-8B24-EC7774E781A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
