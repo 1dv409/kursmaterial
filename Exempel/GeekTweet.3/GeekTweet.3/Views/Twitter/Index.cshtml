@@ -1,0 +1,33 @@
+﻿@model GeekTweet.ViewModels.TwitterIndexViewModel
+
+@{
+    ViewBag.Title = "GeekTweet";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "Getting tweets was unsuccessful. Please correct any errors and try again.");
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ScreenName):
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.ScreenName)
+    </div>
+    <div>
+        <input type="submit" value="Get Tweets" />
+    </div>
+}
+@if (Model != null && Model.HasTweets)
+{
+    <div id="tweets">
+        <h2>
+            The Latest Tweets by @Model.Name</h2>
+        @Html.DisplayFor(m => m.Tweets)
+    </div>
+}
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
