@@ -96,7 +96,9 @@ namespace NextBirthday.Controllers
                     _repository.UpdateBirthday(birthday);
                     _repository.Save();
 
-                    return View("Saved", birthday);
+                    TempData.Add("birthday",birthday);
+
+                    return RedirectToAction("Saved");
                 }
                 catch (Exception)
                 {
@@ -131,7 +133,7 @@ namespace NextBirthday.Controllers
                 _repository.DeleteBirthday(id);
                 _repository.Save();
 
-                return View("Deleted");
+                return RedirectToAction("Deleted");
             }
             catch (Exception)
             {
@@ -140,6 +142,16 @@ namespace NextBirthday.Controllers
             }
 
             return View("Delete", _repository.GetBirthdayById(id));
+        }
+
+        public ActionResult Saved()
+        {
+            return View("Saved", TempData["birthday"]);
+        }
+
+        public ActionResult Deleted()
+        {
+            return View("Deleted");
         }
     }
 }
