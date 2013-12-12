@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ScottGuTimeline" xml:space="preserve">
+    <value>[
+  {
+    "created_at": "Sat Nov 23 20:31:53 +0000 2013",
+    "id": 404346588094414848,
+    "id_str": "404346588094414848",
+    "text": "Fast http://t.co/KoMRKooOzr Web Sites - nice practical book on perf optimizing http://t.co/KoMRKooOzr apps: http://t.co/9ZuuYBznNC",
+    "source": "web",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 89938,
+      "friends_count": 114,
+      "listed_count": 4976,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 44,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US &amp; Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4270,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 36,
+    "favorite_count": 107,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [
+        {
+          "url": "http://t.co/KoMRKooOzr",
+          "expanded_url": "http://ASP.NET",
+          "display_url": "ASP.NET",
+          "indices": [
+            5,
+            27
+          ]
+        },
+        {
+          "url": "http://t.co/KoMRKooOzr",
+          "expanded_url": "http://ASP.NET",
+          "display_url": "ASP.NET",
+          "indices": [
+            79,
+            101
+          ]
+        },
+        {
+          "url": "http://t.co/9ZuuYBznNC",
+          "expanded_url": "http://www.amazon.com/Fast-ASP-NET-Websites-Dean-Alan/dp/1617291250/ref=sr_1_1?ie=UTF8&amp;qid=1385238533&amp;sr=8-1&amp;keywords=fast+asp.net+websites",
+          "display_url": "amazon.com/Fast-ASP-NET-W…",
+          "indices": [
+            108,
+            130
+          ]
+        }
+      ],
+      "user_mentions": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Fri Nov 22 22:00:00 +0000 2013",
+    "id": 404006376587808768,
+    "id_str": "404006376587808768",
+    "text": "@gigabarb @rogerjenn we are seeing a lot of PaaS usage for non-UI scenarios too -&amp;gt; for example: risk modeling of financial portfolios, etc",
+    "source": "web",
+    "truncated": false,
+    "in_reply_to_status_id": 404004743967539200,
+    "in_reply_to_status_id_str": "404004743967539200",
+    "in_reply_to_user_id": 372548499,
+    "in_reply_to_user_id_str": "372548499",
+    "in_reply_to_screen_name": "gigabarb",
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 89938,
+      "friends_count": 114,
+      "listed_count": 4976,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 44,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US &amp; Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4270,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 1,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "gigabarb",
+          "name": "Barb Darrow",
+          "id": 372548499,
+          "id_str": "372548499",
+          "indices": [
+            0,
+            9
+          ]
+        },
+        {
+          "screen_name": "rogerjenn",
+          "name": "Roger Jennings",
+          "id": 14107861,
+          "id_str": "14107861",
+          "indices": [
+            10,
+            20
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Fri Nov 22 05:33:01 +0000 2013",
+    "id": 403757994241822720,
+    "id_str": "403757994241822720",
+    "text": "@mappingbabel @adrianco @gigabarb customer apps/websites hosted on azure with their own domain names resolved fine and were reachable",
+    "source": "&lt;a href=\"http://www.twitter.com\" rel=\"nofollow\"&gt;Twitter for Windows Phone&lt;/a&gt;",
+    "truncated": false,
+    "in_reply_to_status_id": 403748093360746496,
+    "in_reply_to_status_id_str": "403748093360746496",
+    "in_reply_to_user_id": 86351835,
+    "in_reply_to_user_id_str": "86351835",
+    "in_reply_to_screen_name": "mappingbabel",
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 89938,
+      "friends_count": 114,
+      "listed_count": 4976,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 44,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US &amp; Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4270,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 2,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "mappingbabel",
+          "name": "Jack Clark",
+          "id": 86351835,
+          "id_str": "86351835",
+          "indices": [
+            0,
+            13
+          ]
+        },
+        {
+          "screen_name": "adrianco",
+          "name": "adrian cockcroft",
+          "id": 13895242,
+          "id_str": "13895242",
+          "indices": [
+            14,
+            23
+          ]
+        },
+        {
+          "screen_name": "gigabarb",
+          "name": "Barb Darrow",
+          "id": 372548499,
+          "id_str": "372548499",
+          "indices": [
+            24,
+            33
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Fri Nov 22 05:30:23 +0000 2013",
+    "id": 403757329079738368,
+    "id_str": "403757329079738368",
+    "text": "@mappingbabel @adrianco @gigabarb it was a DNS config issue with the top level ms domains names (which is why it impacted all ms properties)",
+    "source": "&lt;a href=\"http://www.twitter.com\" rel=\"nofollow\"&gt;Twitter for Windows Phone&lt;/a&gt;",
+    "truncated": false,
+    "in_reply_to_status_id": 403748093360746496,
+    "in_reply_to_status_id_str": "403748093360746496",
+    "in_reply_to_user_id": 86351835,
+    "in_reply_to_user_id_str": "86351835",
+    "in_reply_to_screen_name": "mappingbabel",
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 89938,
+      "friends_count": 114,
+      "listed_count": 4976,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 44,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US &amp; Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4270,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 7,
+    "favorite_count": 3,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "mappingbabel",
+          "name": "Jack Clark",
+          "id": 86351835,
+          "id_str": "86351835",
+          "indices": [
+            0,
+            13
+          ]
+        },
+        {
+          "screen_name": "adrianco",
+          "name": "adrian cockcroft",
+          "id": 13895242,
+          "id_str": "13895242",
+          "indices": [
+            14,
+            23
+          ]
+        },
+        {
+          "screen_name": "gigabarb",
+          "name": "Barb Darrow",
+          "id": 372548499,
+          "id_str": "372548499",
+          "indices": [
+            24,
+            33
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Fri Nov 22 03:55:01 +0000 2013",
+    "id": 403733328517267456,
+    "id_str": "403733328517267456",
+    "text": "@gigabarb @mappingbabel Correct - the issue today was a widespread DNS issue (and the DNS management was on servers outside of Azure).",
+    "source": "web",
+    "truncated": false,
+    "in_reply_to_status_id": 403699953274347520,
+    "in_reply_to_status_id_str": "403699953274347520",
+    "in_reply_to_user_id": 372548499,
+    "in_reply_to_user_id_str": "372548499",
+    "in_reply_to_screen_name": "gigabarb",
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 89938,
+      "friends_count": 114,
+      "listed_count": 4976,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 44,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US &amp; Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4270,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 4,
+    "favorite_count": 3,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "screen_name": "gigabarb",
+          "name": "Barb Darrow",
+          "id": 372548499,
+          "id_str": "372548499",
+          "indices": [
+            0,
+            9
+          ]
+        },
+        {
+          "screen_name": "mappingbabel",
+          "name": "Jack Clark",
+          "id": 86351835,
+          "id_str": "86351835",
+          "indices": [
+            10,
+            23
+          ]
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  }
+]</value>
+  </data>
+  <data name="ScottGuUser" xml:space="preserve">
+    <value>[
+  {
+    "id": 41754227,
+    "id_str": "41754227",
+    "name": "Scott Guthrie",
+    "screen_name": "scottgu",
+    "location": "Redmond, WA",
+    "description": "I live in Seattle and build a few products for Microsoft",
+    "url": "http://t.co/rkquDCVhAW",
+    "entities": {
+      "url": {
+        "urls": [
+          {
+            "url": "http://t.co/rkquDCVhAW",
+            "expanded_url": "http://weblogs.asp.net/scottgu",
+            "display_url": "weblogs.asp.net/scottgu",
+            "indices": [
+              0,
+              22
+            ]
+          }
+        ]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 90008,
+    "friends_count": 114,
+    "listed_count": 4976,
+    "created_at": "Fri May 22 04:39:35 +0000 2009",
+    "favourites_count": 44,
+    "utc_offset": -28800,
+    "time_zone": "Pacific Time (US &amp; Canada)",
+    "geo_enabled": false,
+    "verified": true,
+    "statuses_count": 4271,
+    "lang": "en",
+    "status": {
+      "created_at": "Wed Nov 27 07:40:31 +0000 2013",
+      "id": 405602018879737856,
+      "id_str": "405602018879737856",
+      "text": "I'm doing talks in Dublin and London next week.  Details on how to attend: http://t.co/KPYCmGNYIy",
+      "source": "web",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 18,
+      "favorite_count": 6,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [
+          {
+            "url": "http://t.co/KPYCmGNYIy",
+            "expanded_url": "http://weblogs.asp.net/scottgu/archive/2013/11/26/presentations-i-m-doing-in-dublin-and-london-dec-2nd-gt-5th.aspx",
+            "display_url": "weblogs.asp.net/scottgu/archiv…",
+            "indices": [
+              75,
+              97
+            ]
+          }
+        ],
+        "user_mentions": []
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    "contributors_enabled": false,
+    "is_translator": false,
+    "profile_background_color": "C0DEED",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "C0DEED",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "default_profile": true,
+    "default_profile_image": false,
+    "following": null,
+    "follow_request_sent": null,
+    "notifications": null
+  }
+]</value>
+  </data>
+</root>

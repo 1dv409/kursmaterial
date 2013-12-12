@@ -1,0 +1,58 @@
+﻿@model GeekTweet.ViewModels.TwitterIndexViewModel
+
+@{
+    ViewBag.Title = "GeekTweet";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "Unable to get tweets. Try again, and if the problem persists, see your system administrator.");
+    <div class="editor-label">
+        @Html.LabelFor(m => m.ScreenName):
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.ScreenName)
+        @Html.ValidationMessageFor(m => m.ScreenName)
+    </div>
+    <div>
+        <input type="submit" value="Get Tweets" />
+    </div>
+}
+@if (Model != null && Model.HasTweets)
+{
+    <div id="tweets">
+        <h1>
+            The Latest Tweets by @Model.Name
+        </h1>
+        @Html.DisplayFor(m => m.Tweets)
+    </div>
+}
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+
+    <script>
+        $(function () {
+            $("#ScreenName").autocomplete({
+                source: function (request, response) {
+                    //Define a function to call the action (assuming TwitterController). 
+                    $.ajax({
+                        url: '@Url.RouteUrl("DefaultApi", new { httproute = "", controller = "ScreenName" } )',
+                        data: { term: request.term },
+                        dataType: "json",
+                        type: "GET",
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return { value: item };
+                            }))
+                        }
+                    })
+                },
+                //Require atleast one character from the user.
+                minLength: 1
+            });
+        });    </script>
+}

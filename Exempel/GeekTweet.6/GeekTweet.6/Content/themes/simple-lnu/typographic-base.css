@@ -1,0 +1,43 @@
+﻿/* Styles for typographic base (Mats Loock | v1.0 | 2010-10-26)
+------------------------------------------------------------------*/
+h1, h2, h3, p
+{
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3
+{
+    font-weight: bold;
+}
+body, button, input, select
+{
+    font-family:"Times New Roman",Times,serif;
+}
+body
+{
+    font-size: 100%;
+    line-height: 1.25em;
+}
+h1
+{
+    font-size: 2em;
+    margin:.67em 0
+}
+h2
+{
+    font-size:1.5em; 
+    margin:.83em 0;
+}
+h3
+{
+    font-size:1.17em; 
+    margin:1em 0;
+}
+p
+{
+    margin: 1em 0;
+}
+button, input, select
+{
+    font-size: 1em;
+}

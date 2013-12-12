@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/themes/simple-lnu/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <div id="header_wrapper">
+                <ul id="top">
+                    <li>ASP.NET MVC (1DV409)</li>
+                    <li>Lecture</li>
+                    <li class="last">Example</li>
+                </ul>
+                <p id="logo_text">
+                    Geek Tweet
+                </p>
+            </div>
+            <div id="menu_wrapper">
+            </div>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+    </div>
+    <div id="footer">
+        <a id="cc" style="float: left;" href="http://creativecommons.org/licenses/by-nc-sa/2.5/se/">
+            <img alt="Creative Commons Erkännande-IckeKommersiell-DelaLika 2.5 Sverige licens." src="~/Content/themes/simple-lnu/images/cc-by-nc-sa.png" /></a>
+        <span style="float: right">Linnæus University | Faculty of Technology | Department of Computer Science</span>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
