@@ -34,9 +34,9 @@ namespace GeekTweet.Domain.DAL
         /// <param name="orderBy"></param>
         /// <param name="includeProperties"></param>
         /// <returns></returns>
-        public virtual IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter = null, 
-            Func<IQueryable<TEntity>, 
-            IOrderedQueryable<TEntity>> orderBy = null, 
+        public virtual IEnumerable<TEntity> Get(
+            Expression<Func<TEntity, bool>> filter = null, 
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, 
             string includeProperties = "")
         {
             IQueryable<TEntity> query = _set;

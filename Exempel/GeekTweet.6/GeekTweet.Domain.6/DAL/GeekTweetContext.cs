@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using GeekTweet.Domain.Abstract;
 using GeekTweet.Domain.Entities;
 
 namespace GeekTweet.Domain.DAL
@@ -6,17 +7,17 @@ namespace GeekTweet.Domain.DAL
     /// <summary>
     /// 
     /// </summary>
-    internal class GeekTweetContext : DbContext
+    internal class GeekTweetContext : DbContext, IGeekTweetContext
     {
         /// <summary>
         /// 
         /// </summary>
-        public DbSet<User> Users { get; set; }
+        public IDbSet<User> Users { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public DbSet<Tweet> Tweets { get; set; }
+        public IDbSet<Tweet> Tweets { get; set; }
 
         /// <summary>
         /// 

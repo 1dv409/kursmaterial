@@ -7,6 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekTweet.6", "GeekTweet.6\
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekTweet.6.Tests", "GeekTweet.6.Tests\GeekTweet.6.Tests.csproj", "{157B3EC3-F604-4564-9E82-14015720C74E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F86C61B-E9E8-403D-9ED2-60DC7BDA4CA6} = {2F86C61B-E9E8-403D-9ED2-60DC7BDA4CA6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekTweet.Domain.6", "GeekTweet.Domain.6\GeekTweet.Domain.6.csproj", "{2F86C61B-E9E8-403D-9ED2-60DC7BDA4CA6}"
 EndProject

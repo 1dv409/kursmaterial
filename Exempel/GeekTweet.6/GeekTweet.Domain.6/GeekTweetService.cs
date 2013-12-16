@@ -40,11 +40,17 @@ namespace GeekTweet.Domain
         /// <returns></returns>
         public override IEnumerable<string> GetScreenNames(string term)
         {
-            return _unitOfWork.UserRepository
-                .Get(u => u.ScreenName.Contains(term))
+            var users = _unitOfWork.UserRepository.Get(u => u.ScreenName.Contains(term));
+            return users
                 .Select(u => u.ScreenName)
                 .OrderBy(s => s)
                 .ToList();
+
+            //return _unitOfWork.UserRepository
+            //    .Get(u => u.ScreenName.Contains(term))
+            //    .Select(u => u.ScreenName)
+            //    .OrderBy(s => s)
+            //    .ToList();
         }
 
         /// <summary>
