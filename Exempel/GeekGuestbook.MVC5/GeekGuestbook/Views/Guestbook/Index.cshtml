@@ -1,0 +1,48 @@
+﻿@model IEnumerable<GeekGuestbook.Models.DataModels.Message>
+@using System.Globalization
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Guestbook</title>
+</head>
+<body>
+    <h1>
+        Guestbook
+    </h1>
+    <p>
+        @Html.ActionLink("Have your say", "Create")
+    </p>
+    @foreach (var item in Model)
+    {
+        <article>
+            <header>
+                <h2>
+                    @Html.DisplayFor(modelItem => item.Header)
+                </h2>
+                <p>
+                    @String.Format(CultureInfo.InvariantCulture, "{0:F}", item.Created)
+                    @if (!String.IsNullOrWhiteSpace(item.Name) &&
+                         !String.IsNullOrWhiteSpace(item.Email))
+                    {
+                        @:by <a href="@item.Email">@item.Name</a>
+                    }
+                    else if (!String.IsNullOrWhiteSpace(item.Name))
+                    {
+                        @:by <span>@item.Name</span>
+                    }
+                </p>
+            </header>
+            <div>
+                @Html.DisplayFor(modelItem => item.Body)
+            </div>
+        </article>
+    }
+</body>
+</html>
