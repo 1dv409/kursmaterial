@@ -1,0 +1,26 @@
+﻿@model NextBirthday._0.Models.Version_1.Birthday
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nästa födelsedag! (version 1)</title>
+</head>
+<body>
+    <h1>
+        Nästa födelsedag! (version 1)
+    </h1>
+    <p>
+        @Model.Name kommer att fylla @Model.Age år på en @Model.NextBirthdayDate.ToString("dddd")
+        om @Model.DaysUntilNextBirthday dagar.
+    </p>
+    <p>
+        @Html.ActionLink("Tillbaka", "Index")
+    </p>
+</body>
+</html>

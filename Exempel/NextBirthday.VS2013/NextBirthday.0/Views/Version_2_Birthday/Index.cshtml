@@ -1,0 +1,40 @@
+﻿@model NextBirthday._0.Models.Version_2.Birthday
+    
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nästa födelsedag (version 2)</title>
+</head>
+<body>
+    <h1>
+        Nästa födelsedag (version 2)
+    </h1>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div>
+            @Html.LabelFor(model => model.Name):
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Name)
+        </div>
+        
+        <div>
+            @Html.LabelFor(model => model.Birthdate):
+        </div>
+        <div>
+            @Html.EditorFor(model => model.Birthdate)
+        </div>
+        
+        <div>
+            <input type="submit" value="Skicka" />
+        </div>
+    }
+    </body>
+</html>
