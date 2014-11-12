@@ -30,7 +30,7 @@ namespace NextBirthdayEF.Controllers
 
         public ActionResult Index()
         {
-            return View("Index", _repository.GetBirthdays());
+            return View(_repository.GetBirthdays());
         }
 
         //
@@ -38,7 +38,7 @@ namespace NextBirthdayEF.Controllers
 
         public ActionResult Create()
         {
-            return View("Create");
+            return View();
         }
 
         //
@@ -56,7 +56,7 @@ namespace NextBirthdayEF.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View("Create");
+            return View();
         }
     }
 }
