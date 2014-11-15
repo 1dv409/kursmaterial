@@ -1,0 +1,25 @@
+﻿@model IEnumerable<NextBirthdayCRUD.Models.Birthday>
+
+<h1>Nästa födelsedag!</h1>
+
+@if (Model != null && Model.Any())
+{
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <strong>@Html.DisplayFor(modelItem => item.Name)</strong> kommer att fylla @Html.DisplayFor(modelItem => item.Age)
+                år på en @item.NextBirthdayDate.ToString("dddd")
+                <strong>om @Html.DisplayFor(modelItem => item.DaysUntilNextBirthday) dagar</strong>.
+                <span>
+                    @Html.ActionLink("Redigera", "Edit", new { id = item.BirthdayId })
+                    |
+                    @Html.ActionLink("Ta bort", "Delete", new { id = item.BirthdayId })
+                </span>
+            </li>
+        }
+    </ul>
+}
+<p>
+    @Html.ActionLink("Lägg till födelsedag", "Create")
+</p>

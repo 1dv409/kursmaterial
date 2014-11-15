@@ -1,0 +1,22 @@
+﻿@model NextBirthdayCRUD.Models.Birthday
+
+@{
+    ViewBag.Title = "Bekräfta borttagning av födelsedag";
+}
+
+<h1>Bekräfta borttagning av födelsedag</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    <p>
+        Bekräfta att du vill ta bort <strong>@Model.Name</strong>, <strong>@Model.Birthdate.ToShortDateString()</strong>.
+    </p>
+    <p>
+        <input type="submit" value="Ta bort" />
+    </p>
+}
+<p>
+    @Html.ActionLink("Tillbaka till lista", "Index")
+</p>

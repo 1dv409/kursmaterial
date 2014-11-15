@@ -1,0 +1,13 @@
+﻿@model NextBirthdayCRUD.Models.Birthday
+
+@{
+    ViewBag.Title = "Redigera födelsedag";
+}
+
+<h1>Redigera födelsedag</h1>
+
+@{ Html.RenderPartial("_BirthdayForm"); }
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
