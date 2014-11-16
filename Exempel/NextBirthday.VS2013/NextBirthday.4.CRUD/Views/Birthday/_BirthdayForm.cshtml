@@ -5,6 +5,7 @@
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
     @Html.HiddenFor(model => model.BirthdayId)
+    
     <div class="form-group">
         @Html.LabelFor(model => model.Name)
         @Html.EditorFor(model => model.Name)

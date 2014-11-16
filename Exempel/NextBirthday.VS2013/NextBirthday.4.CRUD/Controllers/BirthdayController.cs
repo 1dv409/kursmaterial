@@ -54,7 +54,7 @@ namespace NextBirthdayCRUD.Controllers
         // GET: /Birthday/Edit/42
         public ActionResult Edit(int? id)
         {
-            if (id == null)
+            if (!id.HasValue)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -101,7 +101,7 @@ namespace NextBirthdayCRUD.Controllers
         // GET: /Birthday/Delete/42
         public ActionResult Delete(int? id)
         {
-            if (id == null)
+            if (!id.HasValue)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -111,14 +111,14 @@ namespace NextBirthdayCRUD.Controllers
             {
                 return HttpNotFound();
             }
-
+            
             return View(birthday);
         }
 
         // POST: /Birthday/Delete/42
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirm(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
             try
             {
