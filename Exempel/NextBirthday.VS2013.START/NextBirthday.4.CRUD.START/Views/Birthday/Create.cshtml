@@ -1,0 +1,32 @@
+﻿@model NextBirthday.Models.Birthday
+
+@{
+    ViewBag.Title = "Lägg till födelsedag";
+}
+
+<h1>Lägg till födelsedag</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Birthdate)
+        @Html.EditorFor(model => model.Birthdate)
+        @Html.ValidationMessageFor(model => model.Birthdate)
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Skicka" />
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

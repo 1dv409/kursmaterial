@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GeekBirthdayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Birthday">
+          <Key>
+            <PropertyRef Name="BirthdayId" />
+          </Key>
+          <Property Name="BirthdayId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Birthdate" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Function Name="DeleteBirthday" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="BirthdayId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="InsertBirthday" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+          <Parameter Name="Birthdate" Type="datetime2" Mode="In" />
+        </Function>
+        <Function Name="UpdateBirthday" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="BirthdayId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+          <Parameter Name="Birthdate" Type="datetime2" Mode="In" />
+        </Function>
+        <EntityContainer Name="GeekBirthdayModelStoreContainer">
+          <EntitySet Name="Birthday" EntityType="Self.Birthday" Schema="app" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GeekBirthdayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Birthday">
+          <Key>
+            <PropertyRef Name="BirthdayId" />
+          </Key>
+          <Property Name="BirthdayId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Birthdate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GeekBirthdayEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Birthdays" EntityType="Self.Birthday" />
+          <FunctionImport Name="DeleteBirthday">
+            <Parameter Name="BirthdayId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="InsertBirthday" ReturnType="Collection(Decimal)">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Birthdate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateBirthday">
+            <Parameter Name="BirthdayId" Mode="In" Type="Int32" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Birthdate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GeekBirthdayModelStoreContainer" CdmEntityContainer="GeekBirthdayEntities">
+          <EntitySetMapping Name="Birthdays">
+            <EntityTypeMapping TypeName="GeekBirthdayModel.Birthday">
+              <MappingFragment StoreEntitySet="Birthday">
+                <ScalarProperty Name="BirthdayId" ColumnName="BirthdayId" />
+                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="GeekBirthdayModel.Birthday">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="GeekBirthdayModel.Store.InsertBirthday">
+                  <ScalarProperty Name="Birthdate" ParameterName="Birthdate" />
+                  <ScalarProperty Name="Name" ParameterName="Name" />
+                  <ResultBinding Name="BirthdayId" ColumnName="NewBirthdayId" />
+                </InsertFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteBirthday" FunctionName="GeekBirthdayModel.Store.DeleteBirthday" />
+          <FunctionImportMapping FunctionImportName="InsertBirthday" FunctionName="GeekBirthdayModel.Store.InsertBirthday" />
+          <FunctionImportMapping FunctionImportName="UpdateBirthday" FunctionName="GeekBirthdayModel.Store.UpdateBirthday" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
