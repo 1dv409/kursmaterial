@@ -1,0 +1,34 @@
+﻿@model System.String
+
+@{
+    ViewBag.Title = "Hälsning genom Ajax";
+    var ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "result",
+        Url = Url.Action("HelloAjax")
+    };
+}
+
+<h1>Hälsning genom Ajax</h1>
+
+@using (Ajax.BeginForm(ajaxOptions))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.Label("greeting", "Hälsning")
+        @Html.TextBox("greeting")
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Posta hälsning" />
+    </div>
+}
+
+<div id="result">
+    @Model
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/ajax")
+}

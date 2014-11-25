@@ -1,0 +1,9 @@
+﻿@model HelloAjax.Models.Greeting
+
+@if (Model != null &&
+    !String.IsNullOrWhiteSpace(Model.Message))
+{ 
+    <p>
+        Din hälsning: <strong>@Model.Message</strong>
+    </p>
+}

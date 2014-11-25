@@ -1,0 +1,29 @@
+﻿@model System.String
+
+@{
+    ViewBag.Title = "Hälsning utan Ajax";
+}
+
+<h1>Hälsning utan Ajax</h1>
+
+@using(Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.Label("greeting", "Hälsning")
+        @Html.TextBox("greeting")
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Posta hälsning" />
+    </div>
+}
+
+@if (!String.IsNullOrWhiteSpace(Model))
+{ 
+    <div id="result">
+        Din hälsning (utan Ajax): @Model
+    </div>
+}
+
