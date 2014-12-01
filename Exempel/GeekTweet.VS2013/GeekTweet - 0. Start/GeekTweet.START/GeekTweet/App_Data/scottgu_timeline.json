@@ -1,0 +1,1186 @@
+[
+  {
+    "created_at": "Fri Nov 28 19:51:55 +0000 2014",
+    "id": 538420038659616768,
+    "id_str": "538420038659616768",
+    "text": "RT @ArtguruApp: our server processing 30k images at the speed of light!! 16 CPUs SSD, powered by @Azure @MSFTVenturesUK @scottgu http://t.c…",
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "profile_location": null,
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 106456,
+      "friends_count": 135,
+      "listed_count": 5226,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 43,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US & Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4839,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+      "created_at": "Fri Nov 28 10:38:58 +0000 2014",
+      "id": 538280885335101440,
+      "id_str": "538280885335101440",
+      "text": "our server processing 30k images at the speed of light!! 16 CPUs SSD, powered by @Azure @MSFTVenturesUK @scottgu http://t.co/zke18FFWIk",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 2334969632,
+        "id_str": "2334969632",
+        "name": "ArtGuru",
+        "screen_name": "ArtguruApp",
+        "location": "In your smartphone :)",
+        "profile_location": null,
+        "description": "The museum guide redefined. Watch our new video here http://t.co/ThBdPANi0A and join here, for FREE!! http://t.co/hulYcV4TLx",
+        "url": "http://t.co/CClvrQxl8P",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/CClvrQxl8P",
+                "expanded_url": "http://artguru.me",
+                "display_url": "artguru.me",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": [
+              {
+                "url": "http://t.co/ThBdPANi0A",
+                "expanded_url": "http://youtu.be/ctYKDmO-F4g",
+                "display_url": "youtu.be/ctYKDmO-F4g",
+                "indices": [
+                  53,
+                  75
+                ]
+              },
+              {
+                "url": "http://t.co/hulYcV4TLx",
+                "expanded_url": "http://cms.artguru.me",
+                "display_url": "cms.artguru.me",
+                "indices": [
+                  102,
+                  124
+                ]
+              }
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 422,
+        "friends_count": 679,
+        "listed_count": 9,
+        "created_at": "Sun Feb 09 11:29:43 +0000 2014",
+        "favourites_count": 289,
+        "utc_offset": 0,
+        "time_zone": "London",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 797,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/451548759772508160/IOIBftwK.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/451548759772508160/IOIBftwK.jpeg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/432484750272372737/CZuC0Aqv_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/432484750272372737/CZuC0Aqv_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2334969632/1392219071",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 19,
+      "favorite_count": 16,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "Azure",
+            "name": "Microsoft Azure",
+            "id": 17000457,
+            "id_str": "17000457",
+            "indices": [
+              81,
+              87
+            ]
+          },
+          {
+            "screen_name": "MSFTVenturesUK",
+            "name": "Microsoft Ventures",
+            "id": 1704101958,
+            "id_str": "1704101958",
+            "indices": [
+              88,
+              103
+            ]
+          },
+          {
+            "screen_name": "scottgu",
+            "name": "Scott Guthrie",
+            "id": 41754227,
+            "id_str": "41754227",
+            "indices": [
+              104,
+              112
+            ]
+          }
+        ],
+        "urls": [],
+        "media": [
+          {
+            "id": 538280861741764608,
+            "id_str": "538280861741764608",
+            "indices": [
+              113,
+              135
+            ],
+            "media_url": "http://pbs.twimg.com/media/B3hbl4GCUAAz3iU.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/B3hbl4GCUAAz3iU.jpg",
+            "url": "http://t.co/zke18FFWIk",
+            "display_url": "pic.twitter.com/zke18FFWIk",
+            "expanded_url": "http://twitter.com/ArtguruApp/status/538280885335101440/photo/1",
+            "type": "photo",
+            "sizes": {
+              "small": {
+                "w": 340,
+                "h": 255,
+                "resize": "fit"
+              },
+              "medium": {
+                "w": 600,
+                "h": 450,
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": 150,
+                "h": 150,
+                "resize": "crop"
+              },
+              "large": {
+                "w": 1024,
+                "h": 768,
+                "resize": "fit"
+              }
+            }
+          }
+        ]
+      },
+      "extended_entities": {
+        "media": [
+          {
+            "id": 538280861741764608,
+            "id_str": "538280861741764608",
+            "indices": [
+              113,
+              135
+            ],
+            "media_url": "http://pbs.twimg.com/media/B3hbl4GCUAAz3iU.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/B3hbl4GCUAAz3iU.jpg",
+            "url": "http://t.co/zke18FFWIk",
+            "display_url": "pic.twitter.com/zke18FFWIk",
+            "expanded_url": "http://twitter.com/ArtguruApp/status/538280885335101440/photo/1",
+            "type": "photo",
+            "sizes": {
+              "small": {
+                "w": 340,
+                "h": 255,
+                "resize": "fit"
+              },
+              "medium": {
+                "w": 600,
+                "h": 450,
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": 150,
+                "h": 150,
+                "resize": "crop"
+              },
+              "large": {
+                "w": 1024,
+                "h": 768,
+                "resize": "fit"
+              }
+            }
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    "retweet_count": 19,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "ArtguruApp",
+          "name": "ArtGuru",
+          "id": 2334969632,
+          "id_str": "2334969632",
+          "indices": [
+            3,
+            14
+          ]
+        },
+        {
+          "screen_name": "Azure",
+          "name": "Microsoft Azure",
+          "id": 17000457,
+          "id_str": "17000457",
+          "indices": [
+            97,
+            103
+          ]
+        },
+        {
+          "screen_name": "MSFTVenturesUK",
+          "name": "Microsoft Ventures",
+          "id": 1704101958,
+          "id_str": "1704101958",
+          "indices": [
+            104,
+            119
+          ]
+        },
+        {
+          "screen_name": "scottgu",
+          "name": "Scott Guthrie",
+          "id": 41754227,
+          "id_str": "41754227",
+          "indices": [
+            120,
+            128
+          ]
+        }
+      ],
+      "urls": [],
+      "media": [
+        {
+          "id": 538280861741764608,
+          "id_str": "538280861741764608",
+          "indices": [
+            139,
+            140
+          ],
+          "media_url": "http://pbs.twimg.com/media/B3hbl4GCUAAz3iU.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/B3hbl4GCUAAz3iU.jpg",
+          "url": "http://t.co/zke18FFWIk",
+          "display_url": "pic.twitter.com/zke18FFWIk",
+          "expanded_url": "http://twitter.com/ArtguruApp/status/538280885335101440/photo/1",
+          "type": "photo",
+          "sizes": {
+            "small": {
+              "w": 340,
+              "h": 255,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 600,
+              "h": 450,
+              "resize": "fit"
+            },
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "large": {
+              "w": 1024,
+              "h": 768,
+              "resize": "fit"
+            }
+          },
+          "source_status_id": 538280885335101440,
+          "source_status_id_str": "538280885335101440"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "id": 538280861741764608,
+          "id_str": "538280861741764608",
+          "indices": [
+            139,
+            140
+          ],
+          "media_url": "http://pbs.twimg.com/media/B3hbl4GCUAAz3iU.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/B3hbl4GCUAAz3iU.jpg",
+          "url": "http://t.co/zke18FFWIk",
+          "display_url": "pic.twitter.com/zke18FFWIk",
+          "expanded_url": "http://twitter.com/ArtguruApp/status/538280885335101440/photo/1",
+          "type": "photo",
+          "sizes": {
+            "small": {
+              "w": 340,
+              "h": 255,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 600,
+              "h": 450,
+              "resize": "fit"
+            },
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "large": {
+              "w": 1024,
+              "h": 768,
+              "resize": "fit"
+            }
+          },
+          "source_status_id": 538280885335101440,
+          "source_status_id_str": "538280885335101440"
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Thu Nov 27 18:52:03 +0000 2014",
+    "id": 538042585236119553,
+    "id_str": "538042585236119553",
+    "text": "RT @jglozano: The crews are working hard building the new US Central Azure datacenter on this Iowa winter night /cc @scottgu http://t.co/Tq…",
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "profile_location": null,
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 106456,
+      "friends_count": 135,
+      "listed_count": 5226,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 43,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US & Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4839,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+      "created_at": "Thu Nov 27 05:03:38 +0000 2014",
+      "id": 537834109993619458,
+      "id_str": "537834109993619458",
+      "text": "The crews are working hard building the new US Central Azure datacenter on this Iowa winter night /cc @scottgu http://t.co/TqGFxGjnlP",
+      "source": "<a href=\"http://tapbots.com/tweetbot\" rel=\"nofollow\">Tweetbot for iΟS</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 6219712,
+        "id_str": "6219712",
+        "name": "Javier Lozano",
+        "screen_name": "jglozano",
+        "location": "Des Moines, IA",
+        "profile_location": null,
+        "description": "Philosophy to life? Be nice and say thank you.\nHappily working on building out @lozanotek, @geekShareHQ, @ossConf, @aspConf, and @dnetConf",
+        "url": "http://t.co/IVHvdkqb6y",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/IVHvdkqb6y",
+                "expanded_url": "http://jglozano.io",
+                "display_url": "jglozano.io",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 3787,
+        "friends_count": 1138,
+        "listed_count": 211,
+        "created_at": "Tue May 22 03:54:04 +0000 2007",
+        "favourites_count": 62,
+        "utc_offset": -21600,
+        "time_zone": "Central Time (US & Canada)",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 54387,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "131516",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1532862983/headshot_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1532862983/headshot_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/6219712/1357594168",
+        "profile_link_color": "009999",
+        "profile_sidebar_border_color": "EEEEEE",
+        "profile_sidebar_fill_color": "EFEFEF",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": {
+        "id": "1c67f9d9cbae7f69",
+        "url": "https://api.twitter.com/1.1/geo/id/1c67f9d9cbae7f69.json",
+        "place_type": "city",
+        "name": "Des Moines",
+        "full_name": "Des Moines, IA",
+        "country_code": "US",
+        "country": "United States",
+        "contained_within": [],
+        "bounding_box": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -93.709504,
+                41.49702
+              ],
+              [
+                -93.503235,
+                41.49702
+              ],
+              [
+                -93.503235,
+                41.6514656
+              ],
+              [
+                -93.709504,
+                41.6514656
+              ]
+            ]
+          ]
+        },
+        "attributes": {}
+      },
+      "contributors": null,
+      "retweet_count": 30,
+      "favorite_count": 18,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+          {
+            "screen_name": "scottgu",
+            "name": "Scott Guthrie",
+            "id": 41754227,
+            "id_str": "41754227",
+            "indices": [
+              102,
+              110
+            ]
+          }
+        ],
+        "urls": [],
+        "media": [
+          {
+            "id": 537834109922324480,
+            "id_str": "537834109922324480",
+            "indices": [
+              111,
+              133
+            ],
+            "media_url": "http://pbs.twimg.com/media/B3bFRf4CMAAVrYL.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/B3bFRf4CMAAVrYL.jpg",
+            "url": "http://t.co/TqGFxGjnlP",
+            "display_url": "pic.twitter.com/TqGFxGjnlP",
+            "expanded_url": "http://twitter.com/jglozano/status/537834109993619458/photo/1",
+            "type": "photo",
+            "sizes": {
+              "small": {
+                "w": 340,
+                "h": 255,
+                "resize": "fit"
+              },
+              "medium": {
+                "w": 600,
+                "h": 450,
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": 150,
+                "h": 150,
+                "resize": "crop"
+              },
+              "large": {
+                "w": 1024,
+                "h": 768,
+                "resize": "fit"
+              }
+            }
+          }
+        ]
+      },
+      "extended_entities": {
+        "media": [
+          {
+            "id": 537834109922324480,
+            "id_str": "537834109922324480",
+            "indices": [
+              111,
+              133
+            ],
+            "media_url": "http://pbs.twimg.com/media/B3bFRf4CMAAVrYL.jpg",
+            "media_url_https": "https://pbs.twimg.com/media/B3bFRf4CMAAVrYL.jpg",
+            "url": "http://t.co/TqGFxGjnlP",
+            "display_url": "pic.twitter.com/TqGFxGjnlP",
+            "expanded_url": "http://twitter.com/jglozano/status/537834109993619458/photo/1",
+            "type": "photo",
+            "sizes": {
+              "small": {
+                "w": 340,
+                "h": 255,
+                "resize": "fit"
+              },
+              "medium": {
+                "w": 600,
+                "h": 450,
+                "resize": "fit"
+              },
+              "thumb": {
+                "w": 150,
+                "h": 150,
+                "resize": "crop"
+              },
+              "large": {
+                "w": 1024,
+                "h": 768,
+                "resize": "fit"
+              }
+            }
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "possibly_sensitive": false,
+      "lang": "en"
+    },
+    "retweet_count": 30,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "jglozano",
+          "name": "Javier Lozano",
+          "id": 6219712,
+          "id_str": "6219712",
+          "indices": [
+            3,
+            12
+          ]
+        },
+        {
+          "screen_name": "scottgu",
+          "name": "Scott Guthrie",
+          "id": 41754227,
+          "id_str": "41754227",
+          "indices": [
+            116,
+            124
+          ]
+        }
+      ],
+      "urls": [],
+      "media": [
+        {
+          "id": 537834109922324480,
+          "id_str": "537834109922324480",
+          "indices": [
+            139,
+            140
+          ],
+          "media_url": "http://pbs.twimg.com/media/B3bFRf4CMAAVrYL.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/B3bFRf4CMAAVrYL.jpg",
+          "url": "http://t.co/TqGFxGjnlP",
+          "display_url": "pic.twitter.com/TqGFxGjnlP",
+          "expanded_url": "http://twitter.com/jglozano/status/537834109993619458/photo/1",
+          "type": "photo",
+          "sizes": {
+            "small": {
+              "w": 340,
+              "h": 255,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 600,
+              "h": 450,
+              "resize": "fit"
+            },
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "large": {
+              "w": 1024,
+              "h": 768,
+              "resize": "fit"
+            }
+          },
+          "source_status_id": 537834109993619458,
+          "source_status_id_str": "537834109993619458"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "id": 537834109922324480,
+          "id_str": "537834109922324480",
+          "indices": [
+            139,
+            140
+          ],
+          "media_url": "http://pbs.twimg.com/media/B3bFRf4CMAAVrYL.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/B3bFRf4CMAAVrYL.jpg",
+          "url": "http://t.co/TqGFxGjnlP",
+          "display_url": "pic.twitter.com/TqGFxGjnlP",
+          "expanded_url": "http://twitter.com/jglozano/status/537834109993619458/photo/1",
+          "type": "photo",
+          "sizes": {
+            "small": {
+              "w": 340,
+              "h": 255,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 600,
+              "h": 450,
+              "resize": "fit"
+            },
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "large": {
+              "w": 1024,
+              "h": 768,
+              "resize": "fit"
+            }
+          },
+          "source_status_id": 537834109993619458,
+          "source_status_id_str": "537834109993619458"
+        }
+      ]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Wed Nov 26 20:00:10 +0000 2014",
+    "id": 537697339150852097,
+    "id_str": "537697339150852097",
+    "text": "@appsbynight @RussSolberg @Azure great - and apologies for the issue",
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "truncated": false,
+    "in_reply_to_status_id": 537690827779477504,
+    "in_reply_to_status_id_str": "537690827779477504",
+    "in_reply_to_user_id": 194018445,
+    "in_reply_to_user_id_str": "194018445",
+    "in_reply_to_screen_name": "appsbynight",
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "profile_location": null,
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 106456,
+      "friends_count": 135,
+      "listed_count": 5226,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 43,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US & Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4839,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "appsbynight",
+          "name": "Josh Jones",
+          "id": 194018445,
+          "id_str": "194018445",
+          "indices": [
+            0,
+            12
+          ]
+        },
+        {
+          "screen_name": "RussSolberg",
+          "name": "Russell Solberg",
+          "id": 23409620,
+          "id_str": "23409620",
+          "indices": [
+            13,
+            25
+          ]
+        },
+        {
+          "screen_name": "Azure",
+          "name": "Microsoft Azure",
+          "id": 17000457,
+          "id_str": "17000457",
+          "indices": [
+            26,
+            32
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Wed Nov 26 19:30:07 +0000 2014",
+    "id": 537689775814488064,
+    "id_str": "537689775814488064",
+    "text": "@RussSolberg @appsbynight @Azure can you confirm you are ok now?",
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "truncated": false,
+    "in_reply_to_status_id": 537661047705198592,
+    "in_reply_to_status_id_str": "537661047705198592",
+    "in_reply_to_user_id": 23409620,
+    "in_reply_to_user_id_str": "23409620",
+    "in_reply_to_screen_name": "RussSolberg",
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "profile_location": null,
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 106456,
+      "friends_count": 135,
+      "listed_count": 5226,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 43,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US & Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4839,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "RussSolberg",
+          "name": "Russell Solberg",
+          "id": 23409620,
+          "id_str": "23409620",
+          "indices": [
+            0,
+            12
+          ]
+        },
+        {
+          "screen_name": "appsbynight",
+          "name": "Josh Jones",
+          "id": 194018445,
+          "id_str": "194018445",
+          "indices": [
+            13,
+            25
+          ]
+        },
+        {
+          "screen_name": "Azure",
+          "name": "Microsoft Azure",
+          "id": 17000457,
+          "id_str": "17000457",
+          "indices": [
+            26,
+            32
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  {
+    "created_at": "Wed Nov 26 17:21:45 +0000 2014",
+    "id": 537657474690465792,
+    "id_str": "537657474690465792",
+    "text": "@appsbynight @RussSolberg @Azure apologies for that - I believe the root cause is now understood and the team is working to fix now",
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "truncated": false,
+    "in_reply_to_status_id": 537656868898750464,
+    "in_reply_to_status_id_str": "537656868898750464",
+    "in_reply_to_user_id": 194018445,
+    "in_reply_to_user_id_str": "194018445",
+    "in_reply_to_screen_name": "appsbynight",
+    "user": {
+      "id": 41754227,
+      "id_str": "41754227",
+      "name": "Scott Guthrie",
+      "screen_name": "scottgu",
+      "location": "Redmond, WA",
+      "profile_location": null,
+      "description": "I live in Seattle and build a few products for Microsoft",
+      "url": "http://t.co/rkquDCVhAW",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "http://t.co/rkquDCVhAW",
+              "expanded_url": "http://weblogs.asp.net/scottgu",
+              "display_url": "weblogs.asp.net/scottgu",
+              "indices": [
+                0,
+                22
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 106456,
+      "friends_count": 135,
+      "listed_count": 5226,
+      "created_at": "Fri May 22 04:39:35 +0000 2009",
+      "favourites_count": 43,
+      "utc_offset": -28800,
+      "time_zone": "Pacific Time (US & Canada)",
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 4839,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/565139568/redshirt_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "appsbynight",
+          "name": "Josh Jones",
+          "id": 194018445,
+          "id_str": "194018445",
+          "indices": [
+            0,
+            12
+          ]
+        },
+        {
+          "screen_name": "RussSolberg",
+          "name": "Russell Solberg",
+          "id": 23409620,
+          "id_str": "23409620",
+          "indices": [
+            13,
+            25
+          ]
+        },
+        {
+          "screen_name": "Azure",
+          "name": "Microsoft Azure",
+          "id": 17000457,
+          "id_str": "17000457",
+          "indices": [
+            26,
+            32
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  }
+]
