@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GeekTweet.Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Tweet">
+          <Key>
+            <PropertyRef Name="TweetId" />
+          </Key>
+          <Property Name="TweetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="Text" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NextUpdate" Type="datetime2" Precision="0" Nullable="false" />
+          <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ScreenName" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Tweet_User">
+          <End Role="User" Type="Self.User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tweet" Type="Self.Tweet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Tweet">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="DeleteTweet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="TweetId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DeleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="FindDistinctScreenNames" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="Pattern" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="InsertTweet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="Text" Type="varchar" Mode="In" />
+          <Parameter Name="CreatedAt" Type="datetime2" Mode="In" />
+        </Function>
+        <Function Name="InsertUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="Id" Type="varchar" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+          <Parameter Name="ScreenName" Type="varchar" Mode="In" />
+          <Parameter Name="NextUpdate" Type="datetime2" Mode="In" />
+        </Function>
+        <Function Name="UpdateTweet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="TweetId" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="Text" Type="varchar" Mode="In" />
+          <Parameter Name="CreatedAt" Type="datetime2" Mode="In" />
+        </Function>
+        <Function Name="UpdateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="app">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="Id" Type="varchar" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+          <Parameter Name="ScreenName" Type="varchar" Mode="In" />
+          <Parameter Name="NextUpdate" Type="datetime2" Mode="In" />
+        </Function>
+        <EntityContainer Name="GeekTweetModelsStoreContainer">
+          <EntitySet Name="Tweet" EntityType="Self.Tweet" Schema="app" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="app" store:Type="Tables" />
+          <AssociationSet Name="FK_Tweet_User" Association="Self.FK_Tweet_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Tweet" EntitySet="Tweet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GeekTweet.Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Tweet">
+          <Key>
+            <PropertyRef Name="TweetId" />
+          </Key>
+          <Property Name="TweetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Text" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Tweet_User" FromRole="Tweet" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NextUpdate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ScreenName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Tweets" Relationship="Self.FK_Tweet_User" FromRole="User" ToRole="Tweet" />
+        </EntityType>
+        <Association Name="FK_Tweet_User">
+          <End Role="User" Type="Self.User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tweet" Type="Self.Tweet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Tweet">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GeekTweetEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tweets" EntityType="Self.Tweet" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_Tweet_User" Association="Self.FK_Tweet_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Tweet" EntitySet="Tweets" />
+          </AssociationSet>
+          <FunctionImport Name="DeleteTweet">
+            <Parameter Name="TweetId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteUser">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="FindDistinctScreenNames" ReturnType="Collection(String)">
+            <Parameter Name="Pattern" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertTweet" ReturnType="Collection(Decimal)">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+            <Parameter Name="Text" Mode="In" Type="String" />
+            <Parameter Name="CreatedAt" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="InsertUser" ReturnType="Collection(Decimal)">
+            <Parameter Name="Id" Mode="In" Type="String" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="ScreenName" Mode="In" Type="String" />
+            <Parameter Name="NextUpdate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateTweet">
+            <Parameter Name="TweetId" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+            <Parameter Name="Text" Mode="In" Type="String" />
+            <Parameter Name="CreatedAt" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateUser">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+            <Parameter Name="Id" Mode="In" Type="String" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="ScreenName" Mode="In" Type="String" />
+            <Parameter Name="NextUpdate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GeekTweetModelsStoreContainer" CdmEntityContainer="GeekTweetEntities">
+          <EntitySetMapping Name="Tweets">
+            <EntityTypeMapping TypeName="GeekTweet.Models.Tweet">
+              <MappingFragment StoreEntitySet="Tweet">
+                <ScalarProperty Name="TweetId" ColumnName="TweetId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="GeekTweet.Models.Tweet">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="GeekTweet.Models.Store.InsertTweet">
+                  <ScalarProperty Name="CreatedAt" ParameterName="CreatedAt" />
+                  <ScalarProperty Name="Text" ParameterName="Text" />
+                  <ScalarProperty Name="UserId" ParameterName="UserId" />
+                  <ResultBinding Name="TweetId" ColumnName="NewTweetId" />
+                </InsertFunction>
+                <UpdateFunction FunctionName="GeekTweet.Models.Store.UpdateTweet">
+                  <ScalarProperty Name="CreatedAt" ParameterName="CreatedAt" Version="Current" />
+                  <ScalarProperty Name="Text" ParameterName="Text" Version="Current" />
+                  <ScalarProperty Name="UserId" ParameterName="UserId" Version="Current" />
+                  <ScalarProperty Name="TweetId" ParameterName="TweetId" Version="Current" />
+                </UpdateFunction>
+                <DeleteFunction FunctionName="GeekTweet.Models.Store.DeleteTweet">
+                  <ScalarProperty Name="TweetId" ParameterName="TweetId" />
+                </DeleteFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="GeekTweet.Models.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="NextUpdate" ColumnName="NextUpdate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ScreenName" ColumnName="ScreenName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="GeekTweet.Models.User">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="GeekTweet.Models.Store.InsertUser">
+                  <ScalarProperty Name="NextUpdate" ParameterName="NextUpdate" />
+                  <ScalarProperty Name="ScreenName" ParameterName="ScreenName" />
+                  <ScalarProperty Name="Name" ParameterName="Name" />
+                  <ScalarProperty Name="Id" ParameterName="Id" />
+                  <ResultBinding Name="UserId" ColumnName="NewUserId" />
+                </InsertFunction>
+                <UpdateFunction FunctionName="GeekTweet.Models.Store.UpdateUser">
+                  <ScalarProperty Name="NextUpdate" ParameterName="NextUpdate" Version="Current" />
+                  <ScalarProperty Name="ScreenName" ParameterName="ScreenName" Version="Current" />
+                  <ScalarProperty Name="Name" ParameterName="Name" Version="Current" />
+                  <ScalarProperty Name="Id" ParameterName="Id" Version="Current" />
+                  <ScalarProperty Name="UserId" ParameterName="UserId" Version="Current" />
+                </UpdateFunction>
+                <DeleteFunction FunctionName="GeekTweet.Models.Store.DeleteUser">
+                  <ScalarProperty Name="UserId" ParameterName="UserId" />
+                </DeleteFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteTweet" FunctionName="GeekTweet.Models.Store.DeleteTweet" />
+          <FunctionImportMapping FunctionImportName="DeleteUser" FunctionName="GeekTweet.Models.Store.DeleteUser" />
+          <FunctionImportMapping FunctionImportName="FindDistinctScreenNames" FunctionName="GeekTweet.Models.Store.FindDistinctScreenNames" />
+          <FunctionImportMapping FunctionImportName="InsertTweet" FunctionName="GeekTweet.Models.Store.InsertTweet" />
+          <FunctionImportMapping FunctionImportName="InsertUser" FunctionName="GeekTweet.Models.Store.InsertUser" />
+          <FunctionImportMapping FunctionImportName="UpdateTweet" FunctionName="GeekTweet.Models.Store.UpdateTweet" />
+          <FunctionImportMapping FunctionImportName="UpdateUser" FunctionName="GeekTweet.Models.Store.UpdateUser" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
