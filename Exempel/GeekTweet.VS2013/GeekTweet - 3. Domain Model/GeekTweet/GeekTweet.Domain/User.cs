@@ -5,6 +5,7 @@ namespace GeekTweet.Domain
     public partial class User
     {
         public User(JToken userToken)
+            : this()
         {
             Id = userToken.Value<string>("id_str");
             Name = userToken.Value<string>("name");

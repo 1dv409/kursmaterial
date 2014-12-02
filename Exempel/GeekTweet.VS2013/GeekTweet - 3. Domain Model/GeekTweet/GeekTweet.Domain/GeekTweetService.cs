@@ -44,15 +44,12 @@ namespace GeekTweet.Domain
         public override void RefreshTweets(User user)
         {
             // If there are no tweets or if it is time to uppdate the tweets...
-            if (user.Tweets == null || !user.Tweets.Any() || user.NextUpdate < DateTime.Now)
+            if (!user.Tweets.Any() || user.NextUpdate < DateTime.Now)
             {
                 // ...delete the old(?) tweets (if there are any),...
-                if (user.Tweets != null)
+                foreach (var tweet in user.Tweets.ToList())
                 {
-                    foreach (var tweet in user.Tweets.ToList())
-                    {
-                        _repository.RemoveTweet(tweet.TweetId);
-                    }
+                    _repository.RemoveTweet(tweet.TweetId);
                 }
 
                 // ...get the tweets from the web service, and insert them,...
