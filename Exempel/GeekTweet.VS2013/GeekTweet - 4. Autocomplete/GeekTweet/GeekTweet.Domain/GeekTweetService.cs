@@ -1,6 +1,7 @@
 ﻿using GeekTweet.Domain.Repositories;
 using GeekTweet.Domain.Webservices;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace GeekTweet.Domain
@@ -20,6 +21,11 @@ namespace GeekTweet.Domain
         {
             _repository = repository;
             _webservice = webservice;
+        }
+
+        public override IEnumerable<string> GetScreenNames(string term)
+        {
+            return _repository.GetScreenNames(term);
         }
 
         public override User GetUser(string screenName)

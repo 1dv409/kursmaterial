@@ -1,9 +1,7 @@
 ﻿using GeekTweet.Domain;
+using GeekTweet.Infrastructure;
 using GeekTweet.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace GeekTweet.Controllers
@@ -64,6 +62,17 @@ namespace GeekTweet.Controllers
             }
 
             return View(model);
+        }
+
+        #endregion
+
+        #region Ajax action methods
+
+        [HttpPost]
+        [AjaxOnly]
+        public ActionResult GetScreenNames(string term)
+        {
+            return Json(_service.GetScreenNames(term));
         }
 
         #endregion

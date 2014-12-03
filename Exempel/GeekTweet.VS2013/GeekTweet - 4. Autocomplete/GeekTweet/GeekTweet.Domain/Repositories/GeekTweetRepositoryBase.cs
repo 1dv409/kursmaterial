@@ -45,6 +45,16 @@ namespace GeekTweet.Domain.Repositories
         public abstract void UpdateUser(User user);
         public abstract void RemoveUser(int id);
 
+        public IEnumerable<string> GetScreenNames(string term)
+        {
+            return QueryUsers()
+                .Where(u => u.ScreenName.Contains(term))
+                .Select(u => u.ScreenName)
+                .Distinct()
+                .OrderBy(s => s)
+                .ToList();
+        }
+
         public abstract void Save();
 
         #region IDisposable Members

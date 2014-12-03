@@ -4,6 +4,10 @@
     ViewBag.Title = "GeekTweet";
 }
 
+@section Head {
+    @Styles.Render("~/Content/jqueryui")
+}
+
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
@@ -37,5 +41,30 @@
 }
 
 @section scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/jqueryui")
+
+<script>
+        $(function () {
+            $("#ScreenName").autocomplete({
+                source: function (request, response) {
+                    //Define a function to call the action (assuming TwitterController).
+                    $.ajax({
+                        url: '@Url.Action("GetScreenNames")',
+                        type: "POST",
+                        dataType: "json",
+                        // Term will be the parameter used by the action method.
+                        data: { term: request.term },
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return { value: item };
+                            }))
+                        }
+                    })
+                },
+                //Require at least three characters from the user.
+                minLength: 1
+            });
+        });
+</script>
 }

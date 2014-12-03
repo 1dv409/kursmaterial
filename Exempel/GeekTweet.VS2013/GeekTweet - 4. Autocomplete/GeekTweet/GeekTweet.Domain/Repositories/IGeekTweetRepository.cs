@@ -21,6 +21,8 @@ namespace GeekTweet.Domain.Repositories
         void UpdateUser(User user);
         void RemoveUser(int id);
 
+        IEnumerable<string> GetScreenNames(string term);
+
         void Save();
     }
 }
