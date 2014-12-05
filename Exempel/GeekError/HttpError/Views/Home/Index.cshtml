@@ -1,0 +1,57 @@
+﻿<div class="jumbotron">
+    <h1>Hantering av fel</h1>
+    <p class="lead">
+        Fel kan hanteras på många olika sätt. Här demonstraras vad som händer om felhanteringen aktiverats
+        genom att lägga till <pre>
+&lt;system.webserver&gt;
+  &lt;httperrors errormode="Custom" existingresponse="Replace"&gt;
+    &lt;remove statuscode="500" substatuscode="-1" /&gt;
+    &lt;remove statuscode="404" substatuscode="-1" /&gt;
+    &lt;remove statuscode="400" substatuscode="-1" /&gt;
+    &lt;error statuscode="400" prefixlanguagefilepath="" path="400.html" responsemode="File" /&gt;
+    &lt;error statuscode="404" prefixlanguagefilepath="" path="404.html" responsemode="File" /&gt;
+    &lt;error statuscode="500" prefixlanguagefilepath="" path="500.html" responsemode="File" /&gt;
+  &lt;/httperrors&gt;  
+&lt;/system.webserver&gt;
+</pre> i <code>Web.config</code> samt de statiska sidorna <code>400.html</code>, <code>404.html</code> och <code>500.html</code> i applikationsroten.
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>400 - Bad Reqest</h2>
+        <p>
+            Begäran är felaktig och sidan <code>400.html</code> kommer att visas.
+        </p>
+        <p>
+            @Html.ActionLink("Testa", "Fire400", null, new { @class = "btn btn-danger" })
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>404 - Not found</h2>
+        <p>
+            I detta fall begärs en sida som inte finns och sidan <code>404.html</code> kommer att visas.
+        </p>
+        <p>
+            @Html.ActionLink("Testa", "Fire404-NonExciting", null, new { @class = "btn btn-danger" })
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>404 - Not found</h2>
+        <p>
+            I detta fall exekveras <code>return HttpNotFoundResult()</code> och sidan <code>404.html</code> kommer att visas..
+        </p>
+        <p>
+            @Html.ActionLink("Testa", "Fire404", null, new { @class = "btn btn-danger" })
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>500 - Server error</h2>
+        <p>
+            I detta fall kastas ett undantag som inte hanteras och sidan <code>500.html</code> kommer att visas.
+        </p>
+        <p>
+            @Html.ActionLink("Testa", "Fire500", null, new { @class = "btn btn-danger" })
+        </p>
+    </div>
+</div>

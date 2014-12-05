@@ -1,0 +1,46 @@
+﻿<div class="jumbotron">
+    <h1>Hantering av fel</h1>
+    <p class="lead">
+        Fel kan hanteras på många olika sätt. Här demonstraras vad som händer om felhanteringen aktiverats
+        genom att bara lägga till <code>&lt;customerrors mode="On" /&gt;</code> i <code>Web.config</code>.
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>400 - Bad Reqest</h2>
+        <p>
+            Begäran är felaktig varför en felsida som webbservern tillhandahåller kommer att visas.
+        </p>
+        <p>
+            @Html.ActionLink("Testa", "Fire400", null, new { @class = "btn btn-danger" })
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>404 - Not found</h2>
+        <p>
+            I detta fall begärs en sida som inte finns varför en gulful felsida (<mark>YSOD, Yello Screen Of Death</mark>) kommer att visas.
+        </p>
+        <p>
+            @Html.ActionLink("Testa", "Fire404-NonExciting", null, new { @class = "btn btn-danger" })
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>404 - Not found</h2>
+        <p>
+            I detta fall exekveras <code>return HttpNotFoundResult()</code> och en felsida som webbservern tillhandahåller kommer att visas.
+        </p>
+        <p>
+            @Html.ActionLink("Testa", "Fire404", null, new { @class = "btn btn-danger" })
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>500 - Server error</h2>
+        <p>
+            I detta fall kastas ett undantag som inte hanteras varför <code>/Views/Shared/Error.cshtml</code> kommer att visas.
+        </p>
+        <p>
+            @Html.ActionLink("Testa", "Fire500", null, new { @class = "btn btn-danger" })
+        </p>
+    </div>
+</div>
