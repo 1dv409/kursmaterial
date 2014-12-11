@@ -1,0 +1,67 @@
+﻿@model GeekTweet.ViewModels.TwitterIndexViewModel
+
+@{
+    ViewBag.Title = "GeekTweet";
+}
+
+@section Head {
+    @Styles.Render("~/Content/jqueryui")
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, String.Empty, new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.ScreenName, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ScreenName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ScreenName, String.Empty, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-1 col-md-10">
+                <input type="submit" value="Get Tweets" class="btn btn-primary btn-sm" />
+            </div>
+        </div>
+    </div>
+}
+
+@if (Model != null && Model.HasTweets)
+{
+    <div id="tweets">
+        <h2>
+            The Latest Tweets by @Model.Name
+        </h2>
+        @Html.DisplayFor(m => m.Tweets)
+    </div>
+}
+
+@section scripts {
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/jqueryui")
+
+<script>
+    $(function () {
+        $("#ScreenName").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "http://localhost:57394/api/screennames/find/" + request.term,
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { value: item };
+                        }))
+                    }
+                })
+            },
+            //Require at least one character from the user.
+            minLength: 1
+        });
+    });
+</script>
+}
